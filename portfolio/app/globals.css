@@ -1,79 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&display=swap');
 @import "tailwindcss";
 
 @theme {
-  /* Custom Cyberpunk Colors */
-  --color-cyber-dark: #050505;
-  --color-cyber-blue: #00f0ff;
-  --color-cyber-purple: #7000ff;
-  --color-cyber-gray: #1a1a1a;
-
-  /* Custom Grid Background */
-  --background-image-grid-pattern: linear-gradient(to right, rgba(0, 240, 255, 0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(0, 240, 255, 0.05) 1px, transparent 1px);
-
-  /* Animations */
-  --animate-scan: scan 6s linear infinite;
-  --animate-pulse-slow: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-  
-  @keyframes scan {
-    0% { transform: translateY(-100%); }
-    100% { transform: translateY(100%); }
-  }
+  --color-mint-accent: #1DCD9F;
+  --color-shadow-blue: rgb(0, 140, 255);
 }
 
 /* Global Styles */
 body {
-  background-color: var(--color-cyber-dark);
+  background-color: #000000;
   color: #ffffff;
   overflow-x: hidden;
-  font-family: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  font-family: "Special Gothic Expanded One", var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
 }
 
-::selection {
-  background-color: var(--color-cyber-blue);
-  color: #000000;
+/* Hide scrollbar for all browsers */
+body::-webkit-scrollbar {
+  display: none;
+}
+*::-webkit-scrollbar {
+  display: none;
+}
+* {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
-/* High-tech glow and scanning line effects */
-.cyber-panel-glass {
-  background: rgba(10, 10, 10, 0.7);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(0, 240, 255, 0.15);
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5), inset 0 0 10px rgba(0, 240, 255, 0.05);
+/* Home page Name Animation */
+.button {
+  margin: 0;
+  height: auto;
+  background: transparent;
+  padding: 0;
+  border: none;
+  cursor: default;
+  position: relative;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.6);
+  letter-spacing: 3px; 
+  text-decoration: none;
 }
 
-.cyber-panel-glass:hover {
-  border-color: rgba(0, 240, 255, 0.3);
-  box-shadow: 0 0 30px rgba(0, 240, 255, 0.1), inset 0 0 15px rgba(0, 240, 255, 0.05);
-}
-
-/* Scanline animation overlay */
-.scanline::after {
-  content: " ";
-  display: block;
+.hover-text {
   position: absolute;
-  top: 0; left: 0; bottom: 0; right: 0;
-  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 240, 255, 0.08) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.03));
-  z-index: 2;
-  background-size: 100% 4px, 6px 100%;
-  pointer-events: none;
+  box-sizing: border-box;
+  color: #1DCD9F;
+  width: 0%;
+  inset: 0;
+  border-right: 6px solid #1DCD9F;
+  overflow: hidden;
+  transition: 0.5s ease;
+  -webkit-text-stroke: 1px #1DCD9F;
 }
 
-/* Neon glow for text */
-.text-neon-glow {
-  text-shadow: 0 0 10px rgba(0, 240, 255, 0.5), 0 0 20px rgba(0, 240, 255, 0.2);
+.button:hover .hover-text {
+  width: 100%;
+  filter: drop-shadow(0 0 23px #1DCD9F);
 }
 
-.text-neon-purple {
-  text-shadow: 0 0 10px rgba(112, 0, 255, 0.5), 0 0 20px rgba(112, 0, 255, 0.2);
+/* Shadow Glow Button */
+.shadow__btn {
+  padding: 12px 28px;
+  border: none;
+  font-size: 0.9rem;
+  color: #fff;
+  border-radius: 7px;
+  letter-spacing: 2px;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: 0.5s;
+  transition-property: box-shadow;
+  background: rgb(0, 140, 255);
+  box-shadow: 0 0 20px rgb(0, 140, 255);
+  text-decoration: none;
+  display: inline-block;
 }
 
-/* Blinking command prompt cursor */
-.terminal-cursor::after {
-  content: "█";
-  margin-left: 0.25rem;
-  animation: cursor-blink 1s step-start infinite;
+.shadow__btn:hover {
+  color: #fff;
+  box-shadow: 0 0 5px rgb(0, 140, 255),
+              0 0 25px rgb(0, 140, 255),
+              0 0 50px rgb(0, 140, 255),
+              0 0 100px rgb(0, 140, 255);
 }
 
-@keyframes cursor-blink {
-  50% { opacity: 0; }
+/* Fixed side vertical email link */
+.fixed-email {
+  font-family: "Special Gothic Expanded One", sans-serif;
+  position: fixed;
+  left: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  font-size: 0.8rem;
+  color: #1DCD9F;
+  text-decoration: none;
+  letter-spacing: 2px;
+  z-index: 999;
+  transition: color 0.3s ease;
+  padding: 5px;
+}
+
+.fixed-email:hover {
+  color: #ffffff;
+  cursor: pointer;
 }

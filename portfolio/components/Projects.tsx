@@ -8,44 +8,44 @@ const projects = [
         type: "Cybersecurity Sandbox",
         description: "A social engineering sandbox built for cybersecurity education, featuring multi-track logic achievements.",
         tech: ["Next.js", "Python", "AI"],
-        icon: <Cpu className="w-6 h-6 text-cyber-blue" />
+        icon: <Cpu className="w-6 h-6 text-mint-accent" />
     },
     {
         title: "L'Oréal NLP Pipeline",
         type: "Data Engineering",
         description: "End-to-end NLP pipeline for classifying and clustering user comments, deployed with a Streamlit dashboard.",
         tech: ["Python", "Pandas", "Streamlit"],
-        icon: <Database className="w-6 h-6 text-cyber-blue" />
+        icon: <Database className="w-6 h-6 text-mint-accent" />
     },
     {
         title: "Educational Simulations",
         type: "Interactive Pedagogy",
         description: "React/HTML mobile simulations for STEM. Includes a logarithm simulation featuring integrated dynamic teacher's notes on every screen.",
         tech: ["React", "HTML/CSS", "JavaScript"],
-        icon: <Gamepad2 className="w-6 h-6 text-cyber-blue" />
+        icon: <Gamepad2 className="w-6 h-6 text-mint-accent" />
     },
     {
         title: "Ultimate AIoT Hackathon 2025",
         type: "Hardware & Logistics",
         description: "Technical facilitator and managed critical data entry during the hackathon, guiding CDIO prototype development.",
         tech: ["IoT", "Data Entry", "Hardware"],
-        icon: <Cpu className="w-6 h-6 text-cyber-blue" />
+        icon: <Cpu className="w-6 h-6 text-mint-accent" />
     },
     {
         title: "Emergency Response Simulator",
         type: "Simulation Tech",
         description: "Interactive AED training module tailored for Malaysian standards, with emergency protocol dialing configured to 999.",
         tech: ["React", "State Management"],
-        icon: <HeartPulse className="w-6 h-6 text-cyber-blue" />
+        icon: <HeartPulse className="w-6 h-6 text-mint-accent" />
     }
 ];
 
 export default function Projects() {
     return (
-        <section className="py-24 bg-cyber-dark relative z-20">
+        <section id="projects" className="py-24 bg-black relative z-20">
             <div className="container mx-auto px-6">
-                <h2 className="text-3xl md:text-5xl font-bold mb-16 font-mono border-l-4 border-cyber-blue pl-4">
-                    <span className="text-cyber-blue">01.</span> Data_Logs
+                <h2 className="text-3xl md:text-5xl font-bold mb-16 border-l-4 border-mint-accent pl-4">
+                    <span className="text-mint-accent">01.</span> Projects
                 </h2>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -57,19 +57,19 @@ export default function Projects() {
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1, duration: 0.5 }}
                             whileHover={{ y: -10 }}
-                            className="bg-cyber-gray p-8 border border-white/10 hover:border-cyber-blue/50 transition-colors group cursor-pointer"
+                            className="bg-[#111111] p-8 border border-mint-accent/20 hover:border-mint-accent transition-all duration-300 rounded-2xl group cursor-pointer shadow-md hover:shadow-mint-accent/10"
                         >
-                            <div className="mb-6 bg-black/50 w-12 h-12 flex items-center justify-center rounded group-hover:scale-110 transition-transform">
+                            <div className="mb-6 bg-black/60 w-12 h-12 flex items-center justify-center rounded-xl group-hover:scale-110 transition-transform border border-white/5">
                                 {project.icon}
                             </div>
-                            <p className="text-cyber-purple font-mono text-xs mb-2">{project.type}</p>
+                            <p className="text-mint-accent font-mono text-xs mb-2">{project.type}</p>
                             <h3 className="text-xl font-bold mb-3">{project.title}</h3>
                             <p className="text-gray-400 text-sm mb-6 leading-relaxed">
                                 {project.description}
                             </p>
                             <div className="flex flex-wrap gap-2">
                                 {project.tech.map((tech, i) => (
-                                    <span key={i} className="text-xs font-mono bg-black/50 px-2 py-1 text-gray-300">
+                                    <span key={i} className="text-xs font-mono bg-black px-2.5 py-1 text-gray-300 rounded-md border border-white/5">
                                         {tech}
                                     </span>
                                 ))}
