@@ -152,214 +152,196 @@
     </div>
   </section>
   <!-- JOURNEY SECTION -->
-  <section id="journey" class="bg-black text-white py-20 px-6">
+  <section id="journey" class="bg-black text-white py-20 px-6 overflow-hidden">
     <div class="max-w-6xl mx-auto">
-      <h2 class="text-4xl font-bold mb-16 text-center text-[#00bcff]">My Journey</h2>
+      <h2 class="text-4xl font-bold mb-12 text-center text-[#00bcff]">My Journey</h2>
 
-      <div class="relative">
-        <!-- Vertical Line -->
-        <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-[#00bcff]"></div>
+      <!-- Horizontal Timeline Container -->
+      <div class="journey-slider-container relative px-2 md:px-10">
+        <!-- Floating Navigation Controls -->
+        <button id="journey-prev" class="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-black/60 border border-[#00bcff] text-[#00bcff] w-10 h-10 rounded-full flex items-center justify-center hover:bg-[#00bcff] hover:text-white transition-all shadow-[0_0_10px_rgba(0,188,255,0.3)] hover:shadow-[0_0_15px_#00bcff]" aria-label="Previous journey item">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <button id="journey-next" class="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-black/60 border border-[#00bcff] text-[#00bcff] w-10 h-10 rounded-full flex items-center justify-center hover:bg-[#00bcff] hover:text-white transition-all shadow-[0_0_10px_rgba(0,188,255,0.3)] hover:shadow-[0_0_15px_#00bcff]" aria-label="Next journey item">
+          <i class="fas fa-chevron-right"></i>
+        </button>
 
-        <!-- Timeline Card 1 - Right -->
-        <div class="relative mb-16 md:mb-24 md:flex justify-end">
-          <div
-            class="hidden md:block absolute w-4 h-4 bg-[#00bcff] rounded-full left-1/2 transform -translate-x-1/2 top-4 z-10">
-          </div>
-          <div class="md:w-1/2"></div>
-          <div class="md:w-1/2 md:pl-10">
-            <div class="bg-[#111] p-6 rounded-2xl border border-[#00bcff] shadow-lg journey-card">
-              <h3 class="text-xl font-semibold text-[#00bcff]">L'Oréal Datathon 2025</h3>
-              <span class="text-xs text-gray-400 block mt-1">End-to-end Comment Analytics &amp; Dashboard • October
-                2025</span>
-              <ul class="mt-4 space-y-3 text-gray-300 text-sm">
+        <!-- Horizontal Scrollable Track -->
+        <div class="journey-track flex gap-6 overflow-x-auto snap-x snap-mandatory py-6 scrollbar-none" style="scroll-behavior: smooth; -ms-overflow-style: none; scrollbar-width: none;">
+          
+          <!-- Timeline Card 1 -->
+          <div class="journey-item flex-shrink-0 w-[300px] sm:w-[350px] md:w-[380px] snap-start relative pt-8">
+            <!-- Timeline Line, Dot, and Vertical Connector -->
+            <div class="absolute top-0 left-6 right-0 h-0.5 bg-[#00bcff]/30"></div>
+            <div class="absolute top-0 left-6 w-3 h-3 rounded-full bg-[#00bcff] -translate-y-1/2 shadow-[0_0_8px_#00bcff]"></div>
+            <div class="absolute top-0 left-[29px] w-0.5 h-8 bg-[#00bcff]/50"></div>
+            
+            <div class="bg-[#111] p-5 rounded-2xl border border-[#00bcff]/40 hover:border-[#00bcff] shadow-lg journey-card transition-all duration-300 hover:shadow-[0_0_15px_rgba(0,188,255,0.3)] h-full flex flex-col">
+              <h3 class="text-lg font-semibold text-[#00bcff]">L'Oréal Datathon 2025</h3>
+              <span class="text-xs text-gray-400 block mt-1">End-to-end Comment Analytics • October 2025</span>
+              <ul class="mt-4 space-y-2 text-gray-300 text-xs leading-relaxed">
                 <li class="flex items-start">
-                  <span class="inline-block w-2 h-2 rounded-full bg-[#00bcff] mr-3 mt-1.5 flex-shrink-0"></span>
-                  <span>Led a team of 4 to develop an end-to-end NLP pipeline to classify, cluster, analyse and
-                    visualise user comments.</span>
+                  <span class="inline-block w-1.5 h-1.5 rounded-full bg-[#00bcff] mr-2 mt-1.5 flex-shrink-0"></span>
+                  <span>Led a team of 4 to develop an end-to-end NLP pipeline to classify, cluster, analyze, and visualize user comments.</span>
                 </li>
                 <li class="flex items-start">
-                  <span class="inline-block w-2 h-2 rounded-full bg-[#00bcff] mr-3 mt-1.5 flex-shrink-0"></span>
-                  <span>Spearheaded the design and development of an interactive frontend dashboard using Streamlit to
-                    visualise comment analytics, NLP clusters, and user insights.</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- Timeline Card 2 - Left -->
-        <div class="relative mb-16 md:mb-24 md:flex justify-start">
-          <div
-            class="hidden md:block absolute w-4 h-4 bg-[#00bcff] rounded-full left-1/2 transform -translate-x-1/2 top-4 z-10">
-          </div>
-          <div class="md:w-1/2 md:pr-10">
-            <div class="bg-[#111] p-6 rounded-2xl border border-[#00bcff] shadow-lg journey-card">
-              <h3 class="text-xl font-semibold text-[#00bcff]">Green Growth Idea Hackathon 2025</h3>
-              <span class="text-xs text-gray-400 block mt-1">Energy-generating and Storing Tyre | Pohang city, Korea •
-                May 2025</span>
-              <ul class="mt-4 space-y-3 text-gray-300 text-sm">
-                <li class="flex items-start">
-                  <span class="inline-block w-2 h-2 rounded-full bg-[#00bcff] mr-3 mt-1.5 flex-shrink-0"></span>
-                  <span>Proposed an EV tyre system that uses piezoelectric and triboelectric to generate and store
-                    energy while in motion.</span>
-                </li>
-                <li class="flex items-start">
-                  <span class="inline-block w-2 h-2 rounded-full bg-[#00bcff] mr-3 mt-1.5 flex-shrink-0"></span>
-                  <span>Delivered a technical pitch, including system mechanism, sustainability impact, and real-world
-                    scalability.</span>
+                  <span class="inline-block w-1.5 h-1.5 rounded-full bg-[#00bcff] mr-2 mt-1.5 flex-shrink-0"></span>
+                  <span>Spearheaded the design and development of an interactive frontend dashboard using Streamlit to visualize comment analytics.</span>
                 </li>
               </ul>
             </div>
           </div>
-          <div class="md:w-1/2"></div>
-        </div>
 
-        <!-- Timeline Card 3 - Right -->
-        <div class="relative mb-16 md:mb-24 md:flex justify-end">
-          <div
-            class="hidden md:block absolute w-4 h-4 bg-[#00bcff] rounded-full left-1/2 transform -translate-x-1/2 top-4 z-10">
+          <!-- Timeline Card 2 -->
+          <div class="journey-item flex-shrink-0 w-[300px] sm:w-[350px] md:w-[380px] snap-start relative pt-8">
+            <div class="absolute top-0 left-0 right-0 h-0.5 bg-[#00bcff]/30"></div>
+            <div class="absolute top-0 left-6 w-3 h-3 rounded-full bg-[#00bcff] -translate-y-1/2 shadow-[0_0_8px_#00bcff]"></div>
+            <div class="absolute top-0 left-[29px] w-0.5 h-8 bg-[#00bcff]/50"></div>
+            
+            <div class="bg-[#111] p-5 rounded-2xl border border-[#00bcff]/40 hover:border-[#00bcff] shadow-lg journey-card transition-all duration-300 hover:shadow-[0_0_15px_rgba(0,188,255,0.3)] h-full flex flex-col">
+              <h3 class="text-lg font-semibold text-[#00bcff]">Green Growth Idea Hackathon 2025</h3>
+              <span class="text-xs text-gray-400 block mt-1">Energy-generating Tyre | Pohang, Korea • May 2025</span>
+              <ul class="mt-4 space-y-2 text-gray-300 text-xs leading-relaxed">
+                <li class="flex items-start">
+                  <span class="inline-block w-1.5 h-1.5 rounded-full bg-[#00bcff] mr-2 mt-1.5 flex-shrink-0"></span>
+                  <span>Proposed an EV tyre system that uses piezoelectric and triboelectric to generate and store energy while in motion.</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="inline-block w-1.5 h-1.5 rounded-full bg-[#00bcff] mr-2 mt-1.5 flex-shrink-0"></span>
+                  <span>Delivered a technical pitch, including system mechanism, sustainability impact, and real-world scalability.</span>
+                </li>
+              </ul>
+            </div>
           </div>
-          <div class="md:w-1/2"></div>
-          <div class="md:w-1/2 md:pl-10">
-            <div class="bg-[#111] p-6 rounded-2xl border border-[#00bcff] shadow-lg journey-card">
+
+          <!-- Timeline Card 3 -->
+          <div class="journey-item flex-shrink-0 w-[300px] sm:w-[350px] md:w-[380px] snap-start relative pt-8">
+            <div class="absolute top-0 left-0 right-0 h-0.5 bg-[#00bcff]/30"></div>
+            <div class="absolute top-0 left-6 w-3 h-3 rounded-full bg-[#00bcff] -translate-y-1/2 shadow-[0_0_8px_#00bcff]"></div>
+            <div class="absolute top-0 left-[29px] w-0.5 h-8 bg-[#00bcff]/50"></div>
+            
+            <div class="bg-[#111] p-5 rounded-2xl border border-[#00bcff]/40 hover:border-[#00bcff] shadow-lg journey-card transition-all duration-300 hover:shadow-[0_0_15px_rgba(0,188,255,0.3)] h-full flex flex-col">
               <div class="flex justify-between items-start gap-4 flex-wrap">
-                <h3 class="text-xl font-semibold text-[#00bcff]">KADA Financial System</h3>
-                <a href="https://github.com/lauyankai/KADA-system" target="_blank"
-                  class="text-xs text-[#00bcff] hover:text-white flex items-center gap-1 transition-colors mt-1">
+                <h3 class="text-lg font-semibold text-[#00bcff]">KADA Financial System</h3>
+                <a href="https://github.com/lauyankai/KADA-system" target="_blank" class="text-xs text-[#00bcff] hover:text-white flex items-center gap-1 transition-colors mt-1">
                   link <i class="fas fa-external-link-alt text-[10px]"></i>
                 </a>
               </div>
-              <span class="text-xs text-gray-400 block mt-1">Koperasi Kakitangan KADA Kelantan Sdn Bhd • October 2024 -
-                January 2025</span>
-              <ul class="mt-4 space-y-3 text-gray-300 text-sm">
+              <span class="text-xs text-gray-400 block mt-1">Koperasi Kakitangan KADA • October 2024 - January 2025</span>
+              <ul class="mt-4 space-y-2 text-gray-300 text-xs leading-relaxed">
                 <li class="flex items-start">
-                  <span class="inline-block w-2 h-2 rounded-full bg-[#00bcff] mr-3 mt-1.5 flex-shrink-0"></span>
-                  <span>Implemented PHP MVC architecture, integrated PhpSpreadsheet and TCPDF for automated report
-                    generation.</span>
+                  <span class="inline-block w-1.5 h-1.5 rounded-full bg-[#00bcff] mr-2 mt-1.5 flex-shrink-0"></span>
+                  <span>Implemented PHP MVC architecture, integrated PhpSpreadsheet and TCPDF for automated report generation.</span>
                 </li>
                 <li class="flex items-start">
-                  <span class="inline-block w-2 h-2 rounded-full bg-[#00bcff] mr-3 mt-1.5 flex-shrink-0"></span>
+                  <span class="inline-block w-1.5 h-1.5 rounded-full bg-[#00bcff] mr-2 mt-1.5 flex-shrink-0"></span>
                   <span>Developed RESTful APIs to facilitate seamless frontend-backend communication.</span>
                 </li>
                 <li class="flex items-start">
-                  <span class="inline-block w-2 h-2 rounded-full bg-[#00bcff] mr-3 mt-1.5 flex-shrink-0"></span>
-                  <span>Designed and optimised MySQL databases, and role-based access control for members, directors,
-                    and admins.</span>
+                  <span class="inline-block w-1.5 h-1.5 rounded-full bg-[#00bcff] mr-2 mt-1.5 flex-shrink-0"></span>
+                  <span>Designed and optimized MySQL databases, and role-based access control for members, directors, and admins.</span>
                 </li>
               </ul>
             </div>
           </div>
-        </div>
 
-        <!-- Timeline Card 4 - Left -->
-        <div class="relative mb-16 md:mb-24 md:flex justify-start">
-          <div
-            class="hidden md:block absolute w-4 h-4 bg-[#00bcff] rounded-full left-1/2 transform -translate-x-1/2 top-4 z-10">
-          </div>
-          <div class="md:w-1/2 md:pr-10">
-            <div class="bg-[#111] p-6 rounded-2xl border border-[#00bcff] shadow-lg journey-card">
-              <h3 class="text-xl font-semibold text-[#00bcff]">ProSync</h3>
-              <span class="text-xs text-gray-400 block mt-1">Cisco AI Hackathon 2024 Project • November 2024</span>
-              <ul class="mt-4 space-y-3 text-gray-300 text-sm">
+          <!-- Timeline Card 4 -->
+          <div class="journey-item flex-shrink-0 w-[300px] sm:w-[350px] md:w-[380px] snap-start relative pt-8">
+            <div class="absolute top-0 left-0 right-0 h-0.5 bg-[#00bcff]/30"></div>
+            <div class="absolute top-0 left-6 w-3 h-3 rounded-full bg-[#00bcff] -translate-y-1/2 shadow-[0_0_8px_#00bcff]"></div>
+            <div class="absolute top-0 left-[29px] w-0.5 h-8 bg-[#00bcff]/50"></div>
+            
+            <div class="bg-[#111] p-5 rounded-2xl border border-[#00bcff]/40 hover:border-[#00bcff] shadow-lg journey-card transition-all duration-300 hover:shadow-[0_0_15px_rgba(0,188,255,0.3)] h-full flex flex-col">
+              <h3 class="text-lg font-semibold text-[#00bcff]">ProSync</h3>
+              <span class="text-xs text-gray-400 block mt-1">Cisco AI Hackathon Project • November 2024</span>
+              <ul class="mt-4 space-y-2 text-gray-300 text-xs leading-relaxed">
                 <li class="flex items-start">
-                  <span class="inline-block w-2 h-2 rounded-full bg-[#00bcff] mr-3 mt-1.5 flex-shrink-0"></span>
-                  <span>Led a group of 4 to create an innovative project-student matching platform for academic and
-                    career growth.</span>
+                  <span class="inline-block w-1.5 h-1.5 rounded-full bg-[#00bcff] mr-2 mt-1.5 flex-shrink-0"></span>
+                  <span>Led a group of 4 to create an innovative project-student matching platform for academic and career growth.</span>
                 </li>
                 <li class="flex items-start">
-                  <span class="inline-block w-2 h-2 rounded-full bg-[#00bcff] mr-3 mt-1.5 flex-shrink-0"></span>
-                  <span>Designed and build the web application using PHP MVC architecture.</span>
+                  <span class="inline-block w-1.5 h-1.5 rounded-full bg-[#00bcff] mr-2 mt-1.5 flex-shrink-0"></span>
+                  <span>Designed and built the web application using PHP MVC architecture.</span>
                 </li>
                 <li class="flex items-start">
-                  <span class="inline-block w-2 h-2 rounded-full bg-[#00bcff] mr-3 mt-1.5 flex-shrink-0"></span>
-                  <span>Developed a matching algorithm to connect students with relevant projects based on their skills
-                    and interests.</span>
+                  <span class="inline-block w-1.5 h-1.5 rounded-full bg-[#00bcff] mr-2 mt-1.5 flex-shrink-0"></span>
+                  <span>Developed a matching algorithm to connect students with relevant projects based on skills and interests.</span>
                 </li>
               </ul>
             </div>
           </div>
-          <div class="md:w-1/2"></div>
-        </div>
 
-        <!-- Timeline Card 5 - Right -->
-        <div class="relative mb-16 md:mb-24 md:flex justify-end">
-          <div
-            class="hidden md:block absolute w-4 h-4 bg-[#00bcff] rounded-full left-1/2 transform -translate-x-1/2 top-4 z-10">
-          </div>
-          <div class="md:w-1/2"></div>
-          <div class="md:w-1/2 md:pl-10">
-            <div class="bg-[#111] p-6 rounded-2xl border border-[#00bcff] shadow-lg journey-card">
+          <!-- Timeline Card 5 -->
+          <div class="journey-item flex-shrink-0 w-[300px] sm:w-[350px] md:w-[380px] snap-start relative pt-8">
+            <div class="absolute top-0 left-0 right-0 h-0.5 bg-[#00bcff]/30"></div>
+            <div class="absolute top-0 left-6 w-3 h-3 rounded-full bg-[#00bcff] -translate-y-1/2 shadow-[0_0_8px_#00bcff]"></div>
+            <div class="absolute top-0 left-[29px] w-0.5 h-8 bg-[#00bcff]/50"></div>
+            
+            <div class="bg-[#111] p-5 rounded-2xl border border-[#00bcff]/40 hover:border-[#00bcff] shadow-lg journey-card transition-all duration-300 hover:shadow-[0_0_15px_rgba(0,188,255,0.3)] h-full flex flex-col">
               <div class="flex justify-between items-start gap-4 flex-wrap">
-                <h3 class="text-xl font-semibold text-[#00bcff]">Agriculture Crop Yield Prediction</h3>
-                <a href="https://github.com/lauyankai" target="_blank"
-                  class="text-xs text-[#00bcff] hover:text-white flex items-center gap-1 transition-colors mt-1">
+                <h3 class="text-lg font-semibold text-[#00bcff]">Agriculture Crop Yield Prediction</h3>
+                <a href="https://github.com/lauyankai" target="_blank" class="text-xs text-[#00bcff] hover:text-white flex items-center gap-1 transition-colors mt-1">
                   link <i class="fas fa-external-link-alt text-[10px]"></i>
                 </a>
               </div>
-              <span class="text-xs text-gray-400 block mt-1">MCMC Datathon 2024 Project • October 2024</span>
-              <ul class="mt-4 space-y-3 text-gray-300 text-sm">
+              <span class="text-xs text-gray-400 block mt-1">MCMC Datathon Project • October 2024</span>
+              <ul class="mt-4 space-y-2 text-gray-300 text-xs leading-relaxed">
                 <li class="flex items-start">
-                  <span class="inline-block w-2 h-2 rounded-full bg-[#00bcff] mr-3 mt-1.5 flex-shrink-0"></span>
-                  <span>Led a team of 4 in developing an ML-based crop yield prediction model using real-world
-                    agricultural data.</span>
+                  <span class="inline-block w-1.5 h-1.5 rounded-full bg-[#00bcff] mr-2 mt-1.5 flex-shrink-0"></span>
+                  <span>Led a team of 4 in developing an ML-based crop yield prediction model using real-world agricultural data.</span>
                 </li>
                 <li class="flex items-start">
-                  <span class="inline-block w-2 h-2 rounded-full bg-[#00bcff] mr-3 mt-1.5 flex-shrink-0"></span>
+                  <span class="inline-block w-1.5 h-1.5 rounded-full bg-[#00bcff] mr-2 mt-1.5 flex-shrink-0"></span>
                   <span>Conducted data exploration and feature engineering using Pandas, NumPy, and Matplotlib.</span>
                 </li>
                 <li class="flex items-start">
-                  <span class="inline-block w-2 h-2 rounded-full bg-[#00bcff] mr-3 mt-1.5 flex-shrink-0"></span>
-                  <span>Built and optimised machine learning models using Scikit-learn.</span>
+                  <span class="inline-block w-1.5 h-1.5 rounded-full bg-[#00bcff] mr-2 mt-1.5 flex-shrink-0"></span>
+                  <span>Built and optimized machine learning models using Scikit-learn.</span>
                 </li>
               </ul>
             </div>
           </div>
-        </div>
 
-        <!-- Timeline Card 6 - Left -->
-        <div class="relative mb-16 md:mb-24 md:flex justify-start">
-          <div
-            class="hidden md:block absolute w-4 h-4 bg-[#00bcff] rounded-full left-1/2 transform -translate-x-1/2 top-4 z-10">
-          </div>
-          <div class="md:w-1/2 md:pr-10">
-            <div class="bg-[#111] p-6 rounded-2xl border border-[#00bcff] shadow-lg journey-card">
-              <h3 class="text-xl font-semibold text-[#00bcff]">Web Administrator</h3>
-              <span class="text-xs text-gray-400 block mt-1">UTM Faculty of Computing • September 2023 - June
-                2024</span>
-              <ul class="mt-4 space-y-3 text-gray-300 text-sm">
+          <!-- Timeline Card 6 -->
+          <div class="journey-item flex-shrink-0 w-[300px] sm:w-[350px] md:w-[380px] snap-start relative pt-8">
+            <div class="absolute top-0 left-0 right-0 h-0.5 bg-[#00bcff]/30"></div>
+            <div class="absolute top-0 left-6 w-3 h-3 rounded-full bg-[#00bcff] -translate-y-1/2 shadow-[0_0_8px_#00bcff]"></div>
+            <div class="absolute top-0 left-[29px] w-0.5 h-8 bg-[#00bcff]/50"></div>
+            
+            <div class="bg-[#111] p-5 rounded-2xl border border-[#00bcff]/40 hover:border-[#00bcff] shadow-lg journey-card transition-all duration-300 hover:shadow-[0_0_15px_rgba(0,188,255,0.3)] h-full flex flex-col">
+              <h3 class="text-lg font-semibold text-[#00bcff]">Web Administrator</h3>
+              <span class="text-xs text-gray-400 block mt-1">UTM Faculty of Computing • September 2023 - June 2024</span>
+              <ul class="mt-4 space-y-2 text-gray-300 text-xs leading-relaxed">
                 <li class="flex items-start">
-                  <span class="inline-block w-2 h-2 rounded-full bg-[#00bcff] mr-3 mt-1.5 flex-shrink-0"></span>
-                  <span>Maintained website infrastructure, managed system updates, and logged operational
-                    records.</span>
+                  <span class="inline-block w-1.5 h-1.5 rounded-full bg-[#00bcff] mr-2 mt-1.5 flex-shrink-0"></span>
+                  <span>Maintained website infrastructure, managed system updates, and logged operational records.</span>
                 </li>
               </ul>
             </div>
           </div>
-          <div class="md:w-1/2"></div>
-        </div>
 
-        <!-- Timeline Card 7 - Right -->
-        <div class="relative mb-16 md:mb-24 md:flex justify-end">
-          <div
-            class="hidden md:block absolute w-4 h-4 bg-[#00bcff] rounded-full left-1/2 transform -translate-x-1/2 top-4 z-10">
-          </div>
-          <div class="md:w-1/2"></div>
-          <div class="md:w-1/2 md:pl-10">
-            <div class="bg-[#111] p-6 rounded-2xl border border-[#00bcff] shadow-lg journey-card">
-              <h3 class="text-xl font-semibold text-[#00bcff]">Bachelor of Computer Science (Honours)</h3>
+          <!-- Timeline Card 7 -->
+          <div class="journey-item flex-shrink-0 w-[300px] sm:w-[350px] md:w-[380px] snap-start relative pt-8">
+            <div class="absolute top-0 left-0 h-0.5 bg-[#00bcff]/30 w-6"></div>
+            <div class="absolute top-0 left-6 w-3 h-3 rounded-full bg-[#00bcff] -translate-y-1/2 shadow-[0_0_8px_#00bcff]"></div>
+            <div class="absolute top-0 left-[29px] w-0.5 h-8 bg-[#00bcff]/50"></div>
+            
+            <div class="bg-[#111] p-5 rounded-2xl border border-[#00bcff]/40 hover:border-[#00bcff] shadow-lg journey-card transition-all duration-300 hover:shadow-[0_0_15px_rgba(0,188,255,0.3)] h-full flex flex-col">
+              <h3 class="text-lg font-semibold text-[#00bcff]">Bachelor of Computer Science (Honours)</h3>
               <span class="text-xs text-gray-400 block mt-1">Universiti Teknologi Malaysia (UTM) • 2023 - 2027</span>
-              <ul class="mt-4 space-y-3 text-gray-300 text-sm">
+              <ul class="mt-4 space-y-2 text-gray-300 text-xs leading-relaxed">
                 <li class="flex items-start">
-                  <span class="inline-block w-2 h-2 rounded-full bg-[#00bcff] mr-3 mt-1.5 flex-shrink-0"></span>
-                  <span>Specialising in Data Engineering with a 4.00/4.00 CGPA.</span>
+                  <span class="inline-block w-1.5 h-1.5 rounded-full bg-[#00bcff] mr-2 mt-1.5 flex-shrink-0"></span>
+                  <span>Specializing in Data Engineering with a 4.00/4.00 CGPA.</span>
                 </li>
                 <li class="flex items-start">
-                  <span class="inline-block w-2 h-2 rounded-full bg-[#00bcff] mr-3 mt-1.5 flex-shrink-0"></span>
+                  <span class="inline-block w-1.5 h-1.5 rounded-full bg-[#00bcff] mr-2 mt-1.5 flex-shrink-0"></span>
                   <span>Active participant in global and national tech hackathons.</span>
                 </li>
               </ul>
             </div>
           </div>
+
         </div>
       </div>
     </div>
@@ -587,297 +569,477 @@
 
     <!-- ACTUAL PROJECT CONTENT -->
     <div class="relative z-10">
-      <div class="max-w-6xl mx-auto text-center mb-12">
+      <div class="max-w-6xl mx-auto text-center mb-10">
         <h2 class="text-4xl font-bold mb-4">Projects</h2>
-        <p class="text-gray-300 text-lg">Some of the things I've built.</p>
+        <p class="text-gray-300 text-lg">Academic coursework, lab projects, and repositories from my UTM Data Engineering journey.</p>
       </div>
 
-      <div class="grid md:grid-cols-2 gap-10 max-w-6xl mx-auto">
+      <!-- Segmented Year Filter Controls -->
+      <div class="flex justify-center mb-12 relative z-10">
+        <div class="inline-flex bg-[#111] p-1 rounded-full border border-[#00bcff]/30 shadow-[0_0_15px_rgba(0,188,255,0.1)] relative">
+          <button class="project-filter-btn px-6 py-2 rounded-full text-sm font-semibold text-white transition-all relative z-10 active" data-filter="year-3">Year 3</button>
+          <button class="project-filter-btn px-6 py-2 rounded-full text-sm font-semibold text-white/60 hover:text-white transition-all relative z-10" data-filter="year-2">Year 2</button>
+          <button class="project-filter-btn px-6 py-2 rounded-full text-sm font-semibold text-white/60 hover:text-white transition-all relative z-10" data-filter="year-1">Year 1</button>
+          
+          <!-- Sliding active indicator backdrop -->
+          <div class="active-indicator absolute top-1 bottom-1 left-1 bg-[#00bcff] rounded-full transition-all duration-300 ease-out shadow-[0_0_10px_#00bcff]" style="z-index: 1;"></div>
+        </div>
+      </div>
 
-        <!-- PROJECT CARD 1 -->
-        <div
-          class="project-card bg-white text-black shadow-xl rounded-2xl overflow-hidden transform hover:scale-[1.02] transition-all duration-300">
+      <!-- Projects Grid -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto" id="projects-grid">
 
-          <div class="p-6">
-            <h3 class="text-2xl font-semibold mb-2">Azure Medallion Architecture ETL Pipeline</h3>
-            <p class="text-gray-700 mb-4">
-              An end-to-end cloud data pipeline built using Azure Data Factory, Databricks, and Synapse Analytics to
-              transform raw SQL data into an interactive Power BI dashboard for demographic analysis.
-            </p>
-            <div class="flex flex-wrap gap-3 mb-4">
-              <span class="flex items-center gap-1 bg-gray-100 px-2 py-1 text-xs rounded cursor-pointer">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" alt="Azure"
-                  class="w-4 h-4" />
-                Azure
-              </span>
-              <span class="flex items-center gap-1 bg-gray-100 px-2 py-1 text-xs rounded cursor-pointer">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apache/apache-original.svg"
-                  alt="Databricks" class="w-4 h-4" style="filter:invert(1);" />
-                Databricks
-              </span>
-              <span class="flex items-center gap-1 bg-gray-100 px-2 py-1 text-xs rounded cursor-pointer">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"
-                  class="w-4 h-4" />
-                Python
-              </span>
-              <span class="flex items-center gap-1 bg-gray-100 px-2 py-1 text-xs rounded cursor-pointer">
-                <img
-                  src="https://raw.githubusercontent.com/gilbarbara/logos/92bb74e98bca1ea1ad794442676ebc4e75038adc/logos/microsoft-power-bi.svg"
-                  alt="Power BI" class="w-4 h-4" />
-                Power BI
-              </span>
+        <!-- YEAR 3 PROJECTS (Visible by default) -->
+        
+        <!-- PROJECT CARD: ArtificialIntelligence (Year 3) -->
+        <div class="project-card-wrapper" data-year="year-3">
+          <div class="project-card bg-white text-black shadow-xl rounded-2xl overflow-hidden transform hover:scale-[1.02] transition-all duration-300 h-full flex flex-col justify-between">
+            <div class="p-6 flex-grow">
+              <h3 class="text-xl font-bold mb-2">Artificial Intelligence</h3>
+              <p class="text-gray-700 text-sm mb-4">
+                Implementation of search algorithms (DFS, BFS, A*), machine learning classifications, neural networks, natural language processing, and statistical regression models.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="flex items-center gap-1 bg-gray-100 px-2.5 py-1 text-xs rounded-full font-medium text-gray-800">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" class="w-4 h-4" alt="Python" /> Python
+                </span>
+                <span class="flex items-center gap-1 bg-gray-100 px-2.5 py-1 text-xs rounded-full font-medium text-gray-800">
+                  Machine Learning
+                </span>
+                <span class="flex items-center gap-1 bg-gray-100 px-2.5 py-1 text-xs rounded-full font-medium text-gray-800">
+                  <i class="fas fa-brain text-blue-500 mr-1"></i> AI Models
+                </span>
+              </div>
             </div>
-            <div class="flex gap-4">
-              <a href="https://github.com/lauyankai" target="_blank"
-                class="bg-[#00bcff] text-white px-4 py-2 rounded hover:bg-[#009ada] transition-all text-sm">
-                Live Demo
-              </a>
-              <a href="https://github.com/lauyankai" target="_blank"
-                class="bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-700 transition-all text-sm">
-                GitHub
+            <div class="p-6 pt-0 mt-auto">
+              <a href="https://github.com/lauyankai/ArtificialIntelligence" target="_blank" class="bg-[#00bcff] text-white px-4 py-2 rounded-lg hover:bg-[#009ada] transition-all text-sm font-semibold flex items-center justify-center gap-2 w-full">
+                <i class="fab fa-github"></i> View Repository
               </a>
             </div>
           </div>
         </div>
 
-        <!-- PROJECT CARD 2 -->
-        <div
-          class="project-card bg-white text-black shadow-xl rounded-2xl overflow-hidden transform hover:scale-[1.02] transition-all duration-300">
-
-          <div class="p-6">
-            <h3 class="text-2xl font-semibold mb-2">Apache Spark Census Data Warehouse</h3>
-            <p class="text-gray-700 mb-4">
-              Engineered a Star Schema data warehouse processing 2.2GB of CSV census data into Parquet format utilizing
-              PySpark and PostgreSQL for high-speed analytical queries.
-            </p>
-            <div class="flex flex-wrap gap-3 mb-4">
-              <span class="flex items-center gap-1 bg-gray-100 px-2 py-1 text-xs rounded cursor-pointer">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apache/apache-original.svg" alt="Spark"
-                  class="w-4 h-4" style="filter:invert(1);" />
-                PySpark
-              </span>
-              <span class="flex items-center gap-1 bg-gray-100 px-2 py-1 text-xs rounded cursor-pointer">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
-                  alt="PostgreSQL" class="w-4 h-4" />
-                PostgreSQL
-              </span>
-              <span class="flex items-center gap-1 bg-gray-100 px-2 py-1 text-xs rounded cursor-pointer">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"
-                  class="w-4 h-4" />
-                Python
-              </span>
+        <!-- PROJECT CARD: esdm (Year 3) -->
+        <div class="project-card-wrapper" data-year="year-3">
+          <div class="project-card bg-white text-black shadow-xl rounded-2xl overflow-hidden transform hover:scale-[1.02] transition-all duration-300 h-full flex flex-col justify-between">
+            <div class="p-6 flex-grow">
+              <h3 class="text-xl font-bold mb-2">Enterprise Systems Dev</h3>
+              <p class="text-gray-700 text-sm mb-4">
+                Development of enterprise level systems with distributed backend frameworks, service APIs, secure transaction persistence, and performance diagnostics.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="flex items-center gap-1 bg-gray-100 px-2.5 py-1 text-xs rounded-full font-medium text-gray-800">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" class="w-4 h-4" alt="Java" /> Java
+                </span>
+                <span class="flex items-center gap-1 bg-gray-100 px-2.5 py-1 text-xs rounded-full font-medium text-gray-800">
+                  Spring Boot
+                </span>
+                <span class="flex items-center gap-1 bg-gray-100 px-2.5 py-1 text-xs rounded-full font-medium text-gray-800">
+                  REST APIs
+                </span>
+              </div>
             </div>
-            <div class="flex gap-4">
-              <a href="https://github.com/lauyankai" target="_blank"
-                class="bg-[#00bcff] text-white px-4 py-2 rounded hover:bg-[#009ada] transition-all text-sm">
-                Live Demo
-              </a>
-              <a href="https://github.com/lauyankai" target="_blank"
-                class="bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-700 transition-all text-sm">
-                GitHub
+            <div class="p-6 pt-0 mt-auto">
+              <a href="https://github.com/lauyankai/esdm" target="_blank" class="bg-[#00bcff] text-white px-4 py-2 rounded-lg hover:bg-[#009ada] transition-all text-sm font-semibold flex items-center justify-center gap-2 w-full">
+                <i class="fab fa-github"></i> View Repository
               </a>
             </div>
           </div>
         </div>
 
-        <!-- PROJECT CARD 3 -->
-        <div
-          class="project-card bg-white text-black shadow-xl rounded-2xl overflow-hidden transform hover:scale-[1.02] transition-all duration-300">
-
-          <div class="p-6">
-            <h3 class="text-2xl font-semibold mb-2">L'Oréal Datathon NLP Pipeline</h3>
-            <p class="text-gray-700 mb-4">
-              Led development of an NLP pipeline classifying and clustering online user comments. Integrates text
-              tokenization and sentiment modeling with a Streamlit interface.
-            </p>
-            <div class="flex flex-wrap gap-3 mb-4">
-              <span class="flex items-center gap-1 bg-gray-100 px-2 py-1 text-xs rounded cursor-pointer">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"
-                  class="w-4 h-4" />
-                Python
-              </span>
-              <span class="flex items-center gap-1 bg-gray-100 px-2 py-1 text-xs rounded cursor-pointer">
-                <img
-                  src="https://raw.githubusercontent.com/gilbarbara/logos/92bb74e98bca1ea1ad794442676ebc4e75038adc/logos/openai-icon.svg"
-                  alt="NLP" class="w-4 h-4" />
-                NLP
-              </span>
-              <span class="flex items-center gap-1 bg-gray-100 px-2 py-1 text-xs rounded cursor-pointer">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Streamlit"
-                  class="w-4 h-4" />
-                Streamlit
-              </span>
+        <!-- PROJECT CARD: DEspecialtopics (Year 3) -->
+        <div class="project-card-wrapper" data-year="year-3">
+          <div class="project-card bg-white text-black shadow-xl rounded-2xl overflow-hidden transform hover:scale-[1.02] transition-all duration-300 h-full flex flex-col justify-between">
+            <div class="p-6 flex-grow">
+              <h3 class="text-xl font-bold mb-2">DE Special Topics</h3>
+              <p class="text-gray-700 text-sm mb-4">
+                Specialized data engineering architecture projects implementing high-throughput streaming pipelines, distributed batch transformations, and big data stores.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="flex items-center gap-1 bg-gray-100 px-2.5 py-1 text-xs rounded-full font-medium text-gray-800">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apache/apache-original.svg" class="w-4 h-4" alt="Spark" style="filter:invert(1);" /> PySpark
+                </span>
+                <span class="flex items-center gap-1 bg-gray-100 px-2.5 py-1 text-xs rounded-full font-medium text-gray-800">
+                  Big Data
+                </span>
+                <span class="flex items-center gap-1 bg-gray-100 px-2.5 py-1 text-xs rounded-full font-medium text-gray-800">
+                  Kafka
+                </span>
+              </div>
             </div>
-            <div class="flex gap-4">
-              <a href="https://github.com/lauyankai" target="_blank"
-                class="bg-[#00bcff] text-white px-4 py-2 rounded hover:bg-[#009ada] transition-all text-sm">
-                Live Demo
-              </a>
-              <a href="https://github.com/lauyankai" target="_blank"
-                class="bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-700 transition-all text-sm">
-                GitHub
+            <div class="p-6 pt-0 mt-auto">
+              <a href="https://github.com/lauyankai/DEspecialtopics" target="_blank" class="bg-[#00bcff] text-white px-4 py-2 rounded-lg hover:bg-[#009ada] transition-all text-sm font-semibold flex items-center justify-center gap-2 w-full">
+                <i class="fab fa-github"></i> View Repository
               </a>
             </div>
           </div>
         </div>
 
-        <!-- PROJECT CARD 4 -->
-        <div
-          class="project-card bg-white text-black shadow-xl rounded-2xl overflow-hidden transform hover:scale-[1.02] transition-all duration-300">
-
-          <div class="p-6">
-            <h3 class="text-2xl font-semibold mb-2">BioFlora HCI Blog</h3>
-            <p class="text-gray-700 mb-4">
-              A visually rich blog page built for Human Computer Interaction course using MDX and React, highlighting
-              responsive layouts and micro-interactions.
-            </p>
-            <div class="flex flex-wrap gap-3 mb-4">
-              <span class="flex items-center gap-1 bg-gray-100 px-2 py-1 text-xs rounded cursor-pointer">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
-                  alt="React" class="w-4 h-4" />
-                React
-              </span>
-              <span class="flex items-center gap-1 bg-gray-100 px-2 py-1 text-xs rounded cursor-pointer">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
-                  alt="Tailwind CSS" class="w-4 h-4" />
-                Tailwind CSS
-              </span>
-              <span class="flex items-center gap-1 bg-gray-100 px-2 py-1 text-xs rounded cursor-pointer">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
-                  alt="JavaScript" class="w-4 h-4" />
-                JavaScript
-              </span>
+        <!-- PROJECT CARD: tvetmara (Year 3) -->
+        <div class="project-card-wrapper" data-year="year-3">
+          <div class="project-card bg-white text-black shadow-xl rounded-2xl overflow-hidden transform hover:scale-[1.02] transition-all duration-300 h-full flex flex-col justify-between">
+            <div class="p-6 flex-grow">
+              <h3 class="text-xl font-bold mb-2">TVET MARA Portal</h3>
+              <p class="text-gray-700 text-sm mb-4">
+                A management platform tracking and analytics system tailored for MARA vocational educational institutions, optimizing enrollments and reporting statistics.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="flex items-center gap-1 bg-gray-100 px-2.5 py-1 text-xs rounded-full font-medium text-gray-800">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" class="w-4 h-4" alt="PHP" /> PHP
+                </span>
+                <span class="flex items-center gap-1 bg-gray-100 px-2.5 py-1 text-xs rounded-full font-medium text-gray-800">
+                  Database
+                </span>
+                <span class="flex items-center gap-1 bg-gray-100 px-2.5 py-1 text-xs rounded-full font-medium text-gray-800">
+                  Analytics
+                </span>
+              </div>
             </div>
-            <div class="flex gap-4">
-              <a href="https://github.com/lauyankai/BioFlora" target="_blank"
-                class="bg-[#00bcff] text-white px-4 py-2 rounded hover:bg-[#009ada] transition-all text-sm">
-                Live Demo
-              </a>
-              <a href="https://github.com/lauyankai/BioFlora" target="_blank"
-                class="bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-700 transition-all text-sm">
-                GitHub
+            <div class="p-6 pt-0 mt-auto">
+              <a href="https://github.com/lauyankai/tvetmara" target="_blank" class="bg-[#00bcff] text-white px-4 py-2 rounded-lg hover:bg-[#009ada] transition-all text-sm font-semibold flex items-center justify-center gap-2 w-full">
+                <i class="fab fa-github"></i> View Repository
               </a>
             </div>
           </div>
         </div>
 
-        <!-- PROJECT CARD 5 -->
-        <div
-          class="project-card bg-white text-black shadow-xl rounded-2xl overflow-hidden transform hover:scale-[1.02] transition-all duration-300">
-
-          <div class="p-6">
-            <h3 class="text-2xl font-semibold mb-2">Student Registration System</h3>
-            <p class="text-gray-700 mb-4">
-              A secure web-based student info registration database backend crafted with PHP, offering user
-              authentication, record entry, search, and update actions.
-            </p>
-            <div class="flex flex-wrap gap-3 mb-4">
-              <span class="flex items-center gap-1 bg-gray-100 px-2 py-1 text-xs rounded cursor-pointer">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP"
-                  class="w-4 h-4" />
-                PHP
-              </span>
-              <span class="flex items-center gap-1 bg-gray-100 px-2 py-1 text-xs rounded cursor-pointer">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL"
-                  class="w-4 h-4" />
-                MySQL
-              </span>
-              <span class="flex items-center gap-1 bg-gray-100 px-2 py-1 text-xs rounded cursor-pointer">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
-                  alt="Bootstrap" class="w-4 h-4" />
-                Bootstrap
-              </span>
+        <!-- PROJECT CARD: HPDP (Year 3) -->
+        <div class="project-card-wrapper" data-year="year-3">
+          <div class="project-card bg-white text-black shadow-xl rounded-2xl overflow-hidden transform hover:scale-[1.02] transition-all duration-300 h-full flex flex-col justify-between">
+            <div class="p-6 flex-grow">
+              <h3 class="text-xl font-bold mb-2">High Performance Data Processing</h3>
+              <p class="text-gray-700 text-sm mb-4">
+                Optimizations for massive datasets utilizing parallel computation architectures, GPU thread configurations, caching layouts, and low-latency storage mechanisms.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="flex items-center gap-1 bg-gray-100 px-2.5 py-1 text-xs rounded-full font-medium text-gray-800">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" class="w-4 h-4" alt="C++" /> C++
+                </span>
+                <span class="flex items-center gap-1 bg-gray-100 px-2.5 py-1 text-xs rounded-full font-medium text-gray-800">
+                  OpenMP
+                </span>
+                <span class="flex items-center gap-1 bg-gray-100 px-2.5 py-1 text-xs rounded-full font-medium text-gray-800">
+                  CUDA
+                </span>
+              </div>
             </div>
-            <div class="flex gap-4">
-              <a href="https://github.com/lauyankai/StudentInfoRegSystem" target="_blank"
-                class="bg-[#00bcff] text-white px-4 py-2 rounded hover:bg-[#009ada] transition-all text-sm">
-                Live Demo
-              </a>
-              <a href="https://github.com/lauyankai/StudentInfoRegSystem" target="_blank"
-                class="bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-700 transition-all text-sm">
-                GitHub
+            <div class="p-6 pt-0 mt-auto">
+              <a href="https://github.com/lauyankai/HPDP" target="_blank" class="bg-[#00bcff] text-white px-4 py-2 rounded-lg hover:bg-[#009ada] transition-all text-sm font-semibold flex items-center justify-center gap-2 w-full">
+                <i class="fab fa-github"></i> View Repository
               </a>
             </div>
           </div>
         </div>
 
-        <!-- PROJECT CARD 6 -->
-        <div
-          class="project-card bg-white text-black shadow-xl rounded-2xl overflow-hidden transform hover:scale-[1.02] transition-all duration-300">
 
-          <div class="p-6">
-            <h3 class="text-2xl font-semibold mb-2">KADA Financial System</h3>
-            <p class="text-gray-700 mb-4">
-              A comprehensive financial and member transaction tracking system developed in PHP for Koperasi KADA
-              Kelantan.
-            </p>
-            <div class="flex flex-wrap gap-3 mb-4">
-              <span class="flex items-center gap-1 bg-gray-100 px-2 py-1 text-xs rounded cursor-pointer">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP"
-                  class="w-4 h-4" />
-                PHP
-              </span>
-              <span class="flex items-center gap-1 bg-gray-100 px-2 py-1 text-xs rounded cursor-pointer">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL"
-                  class="w-4 h-4" />
-                MySQL
-              </span>
-              <span class="flex items-center gap-1 bg-gray-100 px-2 py-1 text-xs rounded cursor-pointer">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
-                  alt="Bootstrap" class="w-4 h-4" />
-                Bootstrap
-              </span>
+        <!-- YEAR 2 PROJECTS (Hidden by default) -->
+        
+        <!-- PROJECT CARD: Databases (Year 2) -->
+        <div class="project-card-wrapper hidden" data-year="year-2">
+          <div class="project-card bg-white text-black shadow-xl rounded-2xl overflow-hidden transform hover:scale-[1.02] transition-all duration-300 h-full flex flex-col justify-between">
+            <div class="p-6 flex-grow">
+              <h3 class="text-xl font-bold mb-2">Database Systems & Design</h3>
+              <p class="text-gray-700 text-sm mb-4">
+                Relational database schema design, entity-relationship diagrams (ERD) mapping, SQL database normalizations, and advanced SQL querying labs.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="flex items-center gap-1 bg-gray-100 px-2.5 py-1 text-xs rounded-full font-medium text-gray-800">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" class="w-4 h-4" alt="MySQL" /> MySQL
+                </span>
+                <span class="flex items-center gap-1 bg-gray-100 px-2.5 py-1 text-xs rounded-full font-medium text-gray-800">
+                  SQL Queries
+                </span>
+                <span class="flex items-center gap-1 bg-gray-100 px-2.5 py-1 text-xs rounded-full font-medium text-gray-800">
+                  ERD Design
+                </span>
+              </div>
             </div>
-            <div class="flex gap-4">
-              <a href="https://github.com/lauyankai/KADA-system" target="_blank"
-                class="bg-[#00bcff] text-white px-4 py-2 rounded hover:bg-[#009ada] transition-all text-sm">
-                Live Demo
-              </a>
-              <a href="https://github.com/lauyankai/KADA-system" target="_blank"
-                class="bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-700 transition-all text-sm">
-                GitHub
+            <div class="p-6 pt-0 mt-auto">
+              <a href="https://github.com/lauyankai/Databases" target="_blank" class="bg-[#00bcff] text-white px-4 py-2 rounded-lg hover:bg-[#009ada] transition-all text-sm font-semibold flex items-center justify-center gap-2 w-full">
+                <i class="fab fa-github"></i> View Repository
               </a>
             </div>
           </div>
         </div>
 
-        <!-- PROJECT CARD 7 -->
-        <div
-          class="project-card bg-white text-black shadow-xl rounded-2xl overflow-hidden transform hover:scale-[1.02] transition-all duration-300">
-
-          <div class="p-6">
-            <h3 class="text-2xl font-semibold mb-2">Personal Portfolio Website</h3>
-            <p class="text-gray-700 mb-4">
-              A beautiful personal portfolio built with HTML, CSS, JavaScript, and GSAP. Features lazy loading, offline
-              PWA features, and live GitHub stats integration.
-            </p>
-            <div class="flex flex-wrap gap-3 mb-4">
-              <span class="flex items-center gap-1 bg-gray-100 px-2 py-1 text-xs rounded cursor-pointer">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="HTML"
-                  class="w-4 h-4" />
-                HTML
-              </span>
-              <span class="flex items-center gap-1 bg-gray-100 px-2 py-1 text-xs rounded cursor-pointer">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
-                  alt="CSS" class="w-4 h-4" />
-                CSS
-              </span>
-              <span class="flex items-center gap-1 bg-gray-100 px-2 py-1 text-xs rounded cursor-pointer">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
-                  alt="JavaScript" class="w-4 h-4" />
-                JavaScript
-              </span>
+        <!-- PROJECT CARD: Network-Communications (Year 2) -->
+        <div class="project-card-wrapper hidden" data-year="year-2">
+          <div class="project-card bg-white text-black shadow-xl rounded-2xl overflow-hidden transform hover:scale-[1.02] transition-all duration-300 h-full flex flex-col justify-between">
+            <div class="p-6 flex-grow">
+              <h3 class="text-xl font-bold mb-2">Network Communications</h3>
+              <p class="text-gray-700 text-sm mb-4">
+                Networking implementations exploring layer concepts (OSI/TCP-IP), socket programming, routing tables, network packet inspections, and subnetting.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="flex items-center gap-1 bg-gray-100 px-2.5 py-1 text-xs rounded-full font-medium text-gray-800">
+                  <i class="fas fa-ethernet text-blue-500 mr-1"></i> Socket Prog
+                </span>
+                <span class="flex items-center gap-1 bg-gray-100 px-2.5 py-1 text-xs rounded-full font-medium text-gray-800">
+                  TCP/IP
+                </span>
+                <span class="flex items-center gap-1 bg-gray-100 px-2.5 py-1 text-xs rounded-full font-medium text-gray-800">
+                  Wireshark
+                </span>
+              </div>
             </div>
-            <div class="flex gap-4">
-              <a href="https://lauyankai.github.io" target="_blank"
-                class="bg-[#00bcff] text-white px-4 py-2 rounded hover:bg-[#009ada] transition-all text-sm">
-                Live Demo
+            <div class="p-6 pt-0 mt-auto">
+              <a href="https://github.com/lauyankai/Network-Communications" target="_blank" class="bg-[#00bcff] text-white px-4 py-2 rounded-lg hover:bg-[#009ada] transition-all text-sm font-semibold flex items-center justify-center gap-2 w-full">
+                <i class="fab fa-github"></i> View Repository
               </a>
-              <a href="https://github.com/lauyankai/lauyankai.github.io" target="_blank"
-                class="bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-700 transition-all text-sm">
-                GitHub
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJECT CARD: Operating-Systems (Year 2) -->
+        <div class="project-card-wrapper hidden" data-year="year-2">
+          <div class="project-card bg-white text-black shadow-xl rounded-2xl overflow-hidden transform hover:scale-[1.02] transition-all duration-300 h-full flex flex-col justify-between">
+            <div class="p-6 flex-grow">
+              <h3 class="text-xl font-bold mb-2">Operating Systems</h3>
+              <p class="text-gray-700 text-sm mb-4">
+                Low-level process scheduling algorithms simulation, multi-threading implementations, synchronization mechanisms, and Linux Bash script controls.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="flex items-center gap-1 bg-gray-100 px-2.5 py-1 text-xs rounded-full font-medium text-gray-800">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" class="w-4 h-4" alt="Linux" /> Linux
+                </span>
+                <span class="flex items-center gap-1 bg-gray-100 px-2.5 py-1 text-xs rounded-full font-medium text-gray-800">
+                  C Language
+                </span>
+                <span class="flex items-center gap-1 bg-gray-100 px-2.5 py-1 text-xs rounded-full font-medium text-gray-800">
+                  Shell Scripting
+                </span>
+              </div>
+            </div>
+            <div class="p-6 pt-0 mt-auto">
+              <a href="https://github.com/lauyankai/Operating-Systems" target="_blank" class="bg-[#00bcff] text-white px-4 py-2 rounded-lg hover:bg-[#009ada] transition-all text-sm font-semibold flex items-center justify-center gap-2 w-full">
+                <i class="fab fa-github"></i> View Repository
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJECT CARD: StudentInfoRegSystem (Year 2) -->
+        <div class="project-card-wrapper hidden" data-year="year-2">
+          <div class="project-card bg-white text-black shadow-xl rounded-2xl overflow-hidden transform hover:scale-[1.02] transition-all duration-300 h-full flex flex-col justify-between">
+            <div class="p-6 flex-grow">
+              <h3 class="text-xl font-bold mb-2">Student Registration System</h3>
+              <p class="text-gray-700 text-sm mb-4">
+                A secure web-based student info registration database backend crafted with PHP, offering user authentication, record entry, search, and update actions.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="flex items-center gap-1 bg-gray-100 px-2.5 py-1 text-xs rounded-full font-medium text-gray-800">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" class="w-4 h-4" alt="PHP" /> PHP
+                </span>
+                <span class="flex items-center gap-1 bg-gray-100 px-2.5 py-1 text-xs rounded-full font-medium text-gray-800">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" class="w-4 h-4" alt="MySQL" /> MySQL
+                </span>
+                <span class="flex items-center gap-1 bg-gray-100 px-2.5 py-1 text-xs rounded-full font-medium text-gray-800">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" class="w-4 h-4" alt="Bootstrap" /> Bootstrap
+                </span>
+              </div>
+            </div>
+            <div class="p-6 pt-0 mt-auto">
+              <a href="https://github.com/lauyankai/StudentInfoRegSystem" target="_blank" class="bg-[#00bcff] text-white px-4 py-2 rounded-lg hover:bg-[#009ada] transition-all text-sm font-semibold flex items-center justify-center gap-2 w-full">
+                <i class="fab fa-github"></i> View Repository
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJECT CARD: TechEcoPioneer_Project1_SAD_20232024 (Year 2) -->
+        <div class="project-card-wrapper hidden" data-year="year-2">
+          <div class="project-card bg-white text-black shadow-xl rounded-2xl overflow-hidden transform hover:scale-[1.02] transition-all duration-300 h-full flex flex-col justify-between">
+            <div class="p-6 flex-grow">
+              <h3 class="text-xl font-bold mb-2">TechEcoPioneer (SAD)</h3>
+              <p class="text-gray-700 text-sm mb-4">
+                Systems Analysis & Design project proposing a sustainable technology model. Features requirement analysis specifications, system architecture models, and UML diagrams.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="flex items-center gap-1 bg-gray-100 px-2.5 py-1 text-xs rounded-full font-medium text-gray-800">
+                  <i class="fas fa-sitemap text-blue-500 mr-1"></i> UML Modeling
+                </span>
+                <span class="flex items-center gap-1 bg-gray-100 px-2.5 py-1 text-xs rounded-full font-medium text-gray-800">
+                  SAD Life Cycle
+                </span>
+                <span class="flex items-center gap-1 bg-gray-100 px-2.5 py-1 text-xs rounded-full font-medium text-gray-800">
+                  SRS Spec
+                </span>
+              </div>
+            </div>
+            <div class="p-6 pt-0 mt-auto">
+              <a href="https://github.com/lauyankai/TechEcoPioneer_Project1_SAD_20232024" target="_blank" class="bg-[#00bcff] text-white px-4 py-2 rounded-lg hover:bg-[#009ada] transition-all text-sm font-semibold flex items-center justify-center gap-2 w-full">
+                <i class="fab fa-github"></i> View Repository
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJECT CARD: KADA-system (Year 2) -->
+        <div class="project-card-wrapper hidden" data-year="year-2">
+          <div class="project-card bg-white text-black shadow-xl rounded-2xl overflow-hidden transform hover:scale-[1.02] transition-all duration-300 h-full flex flex-col justify-between">
+            <div class="p-6 flex-grow">
+              <h3 class="text-xl font-bold mb-2">KADA Financial System</h3>
+              <p class="text-gray-700 text-sm mb-4">
+                A comprehensive financial and member transaction tracking system developed in PHP for Koperasi KADA Kelantan. Includes role-based controls and automated report generation.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="flex items-center gap-1 bg-gray-100 px-2.5 py-1 text-xs rounded-full font-medium text-gray-800">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" class="w-4 h-4" alt="PHP" /> PHP MVC
+                </span>
+                <span class="flex items-center gap-1 bg-gray-100 px-2.5 py-1 text-xs rounded-full font-medium text-gray-800">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" class="w-4 h-4" alt="MySQL" /> MySQL
+                </span>
+                <span class="flex items-center gap-1 bg-gray-100 px-2.5 py-1 text-xs rounded-full font-medium text-gray-800">
+                  Report Export
+                </span>
+              </div>
+            </div>
+            <div class="p-6 pt-0 mt-auto">
+              <a href="https://github.com/lauyankai/KADA-system" target="_blank" class="bg-[#00bcff] text-white px-4 py-2 rounded-lg hover:bg-[#009ada] transition-all text-sm font-semibold flex items-center justify-center gap-2 w-full">
+                <i class="fab fa-github"></i> View Repository
+              </a>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- YEAR 1 PROJECTS (Hidden by default) -->
+        
+        <!-- PROJECT CARD: Digital Logic (Year 1) -->
+        <div class="project-card-wrapper hidden" data-year="year-1">
+          <div class="project-card bg-white text-black shadow-xl rounded-2xl overflow-hidden transform hover:scale-[1.02] transition-all duration-300 h-full flex flex-col justify-between">
+            <div class="p-6 flex-grow">
+              <h3 class="text-xl font-bold mb-2">Digital Logic</h3>
+              <p class="text-gray-700 text-sm mb-4">
+                Coursework and assignments covering digital circuit design, Boolean algebra simplification, combinational logic gates, and sequential logic design principles.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="flex items-center gap-1 bg-gray-100 px-2.5 py-1 text-xs rounded-full font-medium text-gray-800">
+                  <i class="fas fa-microchip text-blue-500 mr-1"></i> Logisim
+                </span>
+                <span class="flex items-center gap-1 bg-gray-100 px-2.5 py-1 text-xs rounded-full font-medium text-gray-800">
+                  Logic Gates
+                </span>
+                <span class="flex items-center gap-1 bg-gray-100 px-2.5 py-1 text-xs rounded-full font-medium text-gray-800">
+                  Circuit Design
+                </span>
+              </div>
+            </div>
+            <div class="p-6 pt-0 mt-auto">
+              <a href="https://github.com/lauyankai/Digital_Logic" target="_blank" class="bg-[#00bcff] text-white px-4 py-2 rounded-lg hover:bg-[#009ada] transition-all text-sm font-semibold flex items-center justify-center gap-2 w-full">
+                <i class="fab fa-github"></i> View Repository
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJECT CARD: Discrete Structure (Year 1) -->
+        <div class="project-card-wrapper hidden" data-year="year-1">
+          <div class="project-card bg-white text-black shadow-xl rounded-2xl overflow-hidden transform hover:scale-[1.02] transition-all duration-300 h-full flex flex-col justify-between">
+            <div class="p-6 flex-grow">
+              <h3 class="text-xl font-bold mb-2">Discrete Structure</h3>
+              <p class="text-gray-700 text-sm mb-4">
+                Academic projects exploring foundations of discrete mathematics including set theory, graph theory models, combinatorics, counting methods, and probability.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="flex items-center gap-1 bg-gray-100 px-2.5 py-1 text-xs rounded-full font-medium text-gray-800">
+                  <i class="fas fa-project-diagram text-blue-500 mr-1"></i> Graph Theory
+                </span>
+                <span class="flex items-center gap-1 bg-gray-100 px-2.5 py-1 text-xs rounded-full font-medium text-gray-800">
+                  Mathematics
+                </span>
+                <span class="flex items-center gap-1 bg-gray-100 px-2.5 py-1 text-xs rounded-full font-medium text-gray-800">
+                  Logic
+                </span>
+              </div>
+            </div>
+            <div class="p-6 pt-0 mt-auto">
+              <a href="https://github.com/lauyankai/Discrete_Structure" target="_blank" class="bg-[#00bcff] text-white px-4 py-2 rounded-lg hover:bg-[#009ada] transition-all text-sm font-semibold flex items-center justify-center gap-2 w-full">
+                <i class="fab fa-github"></i> View Repository
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJECT CARD: Programming Technique I (Year 1) -->
+        <div class="project-card-wrapper hidden" data-year="year-1">
+          <div class="project-card bg-white text-black shadow-xl rounded-2xl overflow-hidden transform hover:scale-[1.02] transition-all duration-300 h-full flex flex-col justify-between">
+            <div class="p-6 flex-grow">
+              <h3 class="text-xl font-bold mb-2">Programming Technique I</h3>
+              <p class="text-gray-700 text-sm mb-4">
+                Fundamentals of computer programming covering logic building, object-oriented concepts, recursion, array processing, control statements, and pointer variables.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="flex items-center gap-1 bg-gray-100 px-2.5 py-1 text-xs rounded-full font-medium text-gray-800">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" class="w-4 h-4" alt="C++" /> C++
+                </span>
+                <span class="flex items-center gap-1 bg-gray-100 px-2.5 py-1 text-xs rounded-full font-medium text-gray-800">
+                  OOP
+                </span>
+                <span class="flex items-center gap-1 bg-gray-100 px-2.5 py-1 text-xs rounded-full font-medium text-gray-800">
+                  Algorithms
+                </span>
+              </div>
+            </div>
+            <div class="p-6 pt-0 mt-auto">
+              <a href="https://github.com/lauyankai/Programming_Technique_I" target="_blank" class="bg-[#00bcff] text-white px-4 py-2 rounded-lg hover:bg-[#009ada] transition-all text-sm font-semibold flex items-center justify-center gap-2 w-full">
+                <i class="fab fa-github"></i> View Repository
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJECT CARD: Technology and Information System (Year 1) -->
+        <div class="project-card-wrapper hidden" data-year="year-1">
+          <div class="project-card bg-white text-black shadow-xl rounded-2xl overflow-hidden transform hover:scale-[1.02] transition-all duration-300 h-full flex flex-col justify-between">
+            <div class="p-6 flex-grow">
+              <h3 class="text-xl font-bold mb-2">Technology & Information System</h3>
+              <p class="text-gray-700 text-sm mb-4">
+                Introductory curriculum analyzing corporate enterprise IT systems, cloud systems, storage, network architecture, and security protocols in organizations.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="flex items-center gap-1 bg-gray-100 px-2.5 py-1 text-xs rounded-full font-medium text-gray-800">
+                  <i class="fas fa-network-wired text-blue-500 mr-1"></i> Infrastructure
+                </span>
+                <span class="flex items-center gap-1 bg-gray-100 px-2.5 py-1 text-xs rounded-full font-medium text-gray-800">
+                  Cloud Computing
+                </span>
+                <span class="flex items-center gap-1 bg-gray-100 px-2.5 py-1 text-xs rounded-full font-medium text-gray-800">
+                  IT Systems
+                </span>
+              </div>
+            </div>
+            <div class="p-6 pt-0 mt-auto">
+              <a href="https://github.com/lauyankai/Technology_and_Information_System" target="_blank" class="bg-[#00bcff] text-white px-4 py-2 rounded-lg hover:bg-[#009ada] transition-all text-sm font-semibold flex items-center justify-center gap-2 w-full">
+                <i class="fab fa-github"></i> View Repository
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJECT CARD: BioFlora (Year 1) -->
+        <div class="project-card-wrapper hidden" data-year="year-1">
+          <div class="project-card bg-white text-black shadow-xl rounded-2xl overflow-hidden transform hover:scale-[1.02] transition-all duration-300 h-full flex flex-col justify-between">
+            <div class="p-6 flex-grow">
+              <h3 class="text-xl font-bold mb-2">BioFlora HCI Blog</h3>
+              <p class="text-gray-700 text-sm mb-4">
+                A visually rich blog page built for Human Computer Interaction course using MDX and React, highlighting responsive layouts and micro-interactions.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="flex items-center gap-1 bg-gray-100 px-2.5 py-1 text-xs rounded-full font-medium text-gray-800">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" class="w-4 h-4" alt="React" /> React
+                </span>
+                <span class="flex items-center gap-1 bg-gray-100 px-2.5 py-1 text-xs rounded-full font-medium text-gray-800">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" class="w-4 h-4" alt="Tailwind" /> Tailwind CSS
+                </span>
+                <span class="flex items-center gap-1 bg-gray-100 px-2.5 py-1 text-xs rounded-full font-medium text-gray-800">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="w-4 h-4" alt="JS" /> MDX
+                </span>
+              </div>
+            </div>
+            <div class="p-6 pt-0 mt-auto">
+              <a href="https://github.com/lauyankai/BioFlora" target="_blank" class="bg-[#00bcff] text-white px-4 py-2 rounded-lg hover:bg-[#009ada] transition-all text-sm font-semibold flex items-center justify-center gap-2 w-full">
+                <i class="fab fa-github"></i> View Repository
               </a>
             </div>
           </div>

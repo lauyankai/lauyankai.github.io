@@ -64,19 +64,37 @@ gsap.from(".hero-right", {
   delay: 0.3,
 });
 
-gsap.utils.toArray(".journey-card").forEach((card, index) => {
-  gsap.from(card, {
-    opacity: 0,
-    y: 80,
-    duration: .4,
-    ease: "power3.out",
-    scrollTrigger: {
-      trigger: card,
-      start: "top 85%",
-      toggleActions: "play none none reverse",
-    },
-    delay: index * 0.1,
-  });
+// Journey section horizontal slider logic
+document.addEventListener("DOMContentLoaded", () => {
+  const track = document.querySelector('.journey-track');
+  const prevBtn = document.getElementById('journey-prev');
+  const nextBtn = document.getElementById('journey-next');
+
+  if (track && prevBtn && nextBtn) {
+    const scrollAmount = 360; // Card width + gap
+    
+    prevBtn.addEventListener('click', () => {
+      track.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+    });
+    
+    nextBtn.addEventListener('click', () => {
+      track.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    });
+  }
+});
+
+// Stagger animation for horizontal journey cards when entering viewport
+gsap.from(".journey-item", {
+  opacity: 0,
+  x: 50,
+  duration: 0.8,
+  stagger: 0.1,
+  ease: "power2.out",
+  scrollTrigger: {
+    trigger: ".journey-track",
+    start: "top 80%",
+    toggleActions: "play none none reset",
+  }
 });
 
 // HERO SECTION LINE WAVES BACKGROUND
@@ -453,16 +471,18 @@ gsap.utils.toArray('.fade-in').forEach((el) => {
   });
 });
 
-gsap.from(".project-card", {
+gsap.from(".project-card-wrapper:not(.hidden)", {
   scrollTrigger: {
-    trigger: ".project-card",
+    trigger: "#projects-grid",
     start: "top 85%",
     toggleActions: "play none none reset"
   },
   opacity: 0,
-  y: 60,
-  duration: 1,
-  ease: "power3.out"
+  scale: 0.95,
+  y: 40,
+  duration: 0.8,
+  stagger: 0.1,
+  ease: "power2.out"
 });
   
 
@@ -917,5 +937,82 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     });
   }
+});
+
+// Projects Segmented Filter Logic
+document.addEventListener('DOMContentLoaded', function() {
+  const filterBtns = document.querySelectorAll('.project-filter-btn');
+  const indicator = document.querySelector('.active-indicator');
+  const projectCards = document.querySelectorAll('.project-card-wrapper');
+
+  function updateIndicator(btn) {
+    if (indicator && btn) {
+      indicator.style.width = btn.offsetWidth + 'px';
+      indicator.style.left = btn.offsetLeft + 'px';
+    }
+  }
+
+  // Set initial indicator position
+  const activeBtn = document.querySelector('.project-filter-btn.active');
+  if (activeBtn) {
+    setTimeout(() => updateIndicator(activeBtn), 300);
+  }
+
+  // Update on window resize
+  window.addEventListener('resize', () => {
+    const currentActive = document.querySelector('.project-filter-btn.active');
+    if (currentActive) {
+      updateIndicator(currentActive);
+    }
+  });
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      if (btn.classList.contains('active')) return;
+
+      // Update active classes
+      filterBtns.forEach(b => {
+        b.classList.remove('active', 'text-white');
+        b.classList.add('text-white/60');
+      });
+      btn.classList.add('active', 'text-white');
+      btn.classList.remove('text-white/60');
+      
+      // Slide active pill background
+      updateIndicator(btn);
+
+      const filterValue = btn.getAttribute('data-filter');
+      const visibleBefore = Array.from(projectCards).filter(card => !card.classList.contains('hidden'));
+
+      // Stagger out visible cards, toggle active class, stagger in selected group
+      gsap.to(visibleBefore, {
+        opacity: 0,
+        scale: 0.95,
+        y: 20,
+        duration: 0.2,
+        ease: "power2.in",
+        stagger: 0.04,
+        onComplete: () => {
+          projectCards.forEach(card => {
+            if (card.getAttribute('data-year') === filterValue) {
+              card.classList.remove('hidden');
+            } else {
+              card.classList.add('hidden');
+            }
+          });
+
+          // Refresh ScrollTrigger hooks
+          ScrollTrigger.refresh();
+
+          const visibleAfter = Array.from(projectCards).filter(card => !card.classList.contains('hidden'));
+          
+          gsap.fromTo(visibleAfter, 
+            { opacity: 0, scale: 0.95, y: 30 },
+            { opacity: 1, scale: 1, y: 0, duration: 0.4, ease: "power2.out", stagger: 0.06 }
+          );
+        }
+      });
+    });
+  });
 });
   
