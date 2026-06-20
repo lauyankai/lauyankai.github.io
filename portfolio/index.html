@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio / Lau Yan Kai</title>
+
+
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="icon" href="assets/android-chrome-512x512.png" type="image/x-icon">
+</head>
+
+<body>
+  <!-- Scroll Progress Bar -->
+  <div id="scroll-bar"
+    class="fixed right-6 top-1/2 transform -translate-y-1/2 h-64 w-1.5 bg-gray-700 rounded-full z-50 hidden sm:block">
+    <div id="scroll-indicator"
+      class="bg-[#00bcff] h-0 w-full rounded-full transition-all duration-300 ease-out shadow-md shadow-[#00bcff]">
+    </div>
+  </div>
+  <!-- Loading Animation -->
+  <div id="loading">
+    <div class="loading-text" id="name-loader">
+      <span data-text="L">L</span>
+      <span data-text="A">A</span>
+      <span data-text="U">U</span>
+      <span data-text="&nbsp;">&nbsp;</span>
+      <span data-text="Y">Y</span>
+      <span data-text="A">A</span>
+      <span data-text="N">N</span>
+      <span data-text="&nbsp;">&nbsp;</span>
+      <span data-text="K">K</span>
+      <span data-text="A">A</span>
+      <span data-text="I">I</span>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section
+    class="position-relative container-fluid min-vh-100 d-flex justify-content-center align-items-center text-white overflow-hidden"
+    style="background-color: #000000">
+    <!-- Hero Line Waves Background -->
+    <div id="line-waves-container" class="position-absolute w-100 h-100 top-0 start-0" style="z-index: 0"></div>
+
+    <!-- Hero Content -->
+    <div class="container text-center position-relative" style="z-index: 1">
+      <h1 class="display-4 fw-bold">
+        <span class="text-white me-2">Hi, I'm</span>
+        <button class="button" data-text="Yan Kai">
+          <span class="actual-text">&nbsp;Yan Kai&nbsp;</span>
+          <span aria-hidden="true" class="hover-text">&nbsp;Yan Kai&nbsp;</span>
+        </button>
+      </h1>
+      <p class="lead text-light mt-3">
+        A Data Engineering Student passionate about building robust data pipelines, predictive models, and sleek
+        analytics tools.
+      </p>
+      <a href="#projects" class="shadow__btn mt-4">View Projects</a>
+    </div>
+  </section>
+
+  <!-- About Me Section -->
+  <section id="about" class="bg-black text-white py-20 px-6">
+    <div class="max-w-4xl mx-auto text-center px-4">
+      <!-- Text Content -->
+      <div class="max-w-3xl mx-auto" id="about-text">
+        <h2 class="text-3xl md:text-4xl font-semibold leading-snug mb-6">
+          I'm <span class="text-[#00bcff] font-bold">Lau Yan Kai</span>.
+        </h2>
+
+        <p class="text-gray-300 text-lg leading-relaxed mb-6">
+          I'm currently pursuing my Bachelor of Computer Science with Honours (Data Engineering) at
+          Universiti Teknologi Malaysia (UTM), maintaining a CGPA of 4.00/4.00. I specialise in building end-to-end data
+          pipelines, processing large datasets, and designing cloud infrastructure.
+        </p>
+
+        <p class="text-gray-300 text-lg leading-relaxed mb-6">
+          I'm passionate about
+          <span class="text-[#00bcff] font-bold">Python</span>,
+          <span class="text-[#00bcff] font-bold">SQL</span>,
+          <span class="text-[#00bcff] font-bold">Azure</span>, and bringing
+          intelligent solutions to life. I am actively looking for a one-year internship opportunity from September 2026
+          to June 2027 to develop enterprise architecture experience.
+        </p>
+
+        <!-- Social Icons -->
+        <ul class="example-2 flex justify-center mt-8">
+          <li class="icon-content">
+            <a href="https://linkedin.com/in/lauyankai" aria-label="LinkedIn" data-social="linkedin" target="_blank">
+              <div class="filled"></div>
+              <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="480" height="480" viewBox="0 0 48 48">
+                <path fill="#0288d1" d="M24 4A20 20 0 1 0 24 44A20 20 0 1 0 24 4Z"></path>
+                <path fill="#fff"
+                  d="M14 19H18V34H14zM15.988 17h-.022C14.772 17 14 16.11 14 14.999 14 13.864 14.796 13 16.011 13c1.217 0 1.966.864 1.989 1.999C18 16.11 17.228 17 15.988 17zM35 24.5c0-3.038-2.462-5.5-5.5-5.5-1.862 0-3.505.928-4.5 2.344V19h-4v15h4v-8c0-1.657 1.343-3 3-3s3 1.343 3 3v8h4C35 34 35 24.921 35 24.5z">
+                </path>
+              </svg>
+            </a>
+            <div class="tooltip">LinkedIn</div>
+          </li>
+          <li class="icon-content">
+            <a href="mailto:lauyankai04@gmail.com" aria-label="Email" data-social="email">
+              <div class="filled"></div>
+              <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="240" height="240" viewBox="0 0 48 48">
+                <path fill="#e0e0e0"
+                  d="M5.5,40.5h37c1.933,0,3.5-1.567,3.5-3.5V11c0-1.933-1.567-3.5-3.5-3.5h-37C3.567,7.5,2,9.067,2,11v26C2,38.933,3.567,40.5,5.5,40.5z">
+                </path>
+                <path fill="#d9d9d9"
+                  d="M26,40.5h16.5c1.933,0,3.5-1.567,3.5-3.5V11c0-1.933-1.567-3.5-3.5-3.5h-37C3.567,7.5,2,9.067,2,11L26,40.5z">
+                </path>
+                <path fill="#eee" d="M6.745,40.5H42.5c1.933,0,3.5-1.567,3.5-3.5V11.5L6.745,40.5z"></path>
+                <path fill="#e0e0e0" d="M25.745,40.5H42.5c1.933,0,3.5-1.567,3.5-3.5V11.5L18.771,31.616L25.745,40.5z">
+                </path>
+                <path fill="#ca3737"
+                  d="M42.5,9.5h-37C3.567,9.5,2,9.067,2,11v26c0,1.933,1.567,3.5,3.5,3.5H7V12h34v28.5h1.5c1.933,0,3.5-1.567,3.5-3.5V11C46,9.067,44.433,9.5,42.5,9.5z">
+                </path>
+                <path fill="#f5f5f5"
+                  d="M42.5,7.5H24H5.5C3.567,7.5,2,9.036,2,11c0,1.206,1.518,2.258,1.518,2.258L24,27.756l20.482-14.497c0,0,1.518-1.053,1.518-2.258C46,9.036,44.433,7.5,42.5,7.5z">
+                </path>
+                <path fill="#e84f4b"
+                  d="M43.246,7.582L24,21L4.754,7.582C3.18,7.919,2,9.297,2,11c0,1.206,1.518,2.258,1.518,2.258L24,27.756l20.482-14.497c0,0,1.518-1.053,1.518-2.258C46,9.297,44.82,7.919,43.246,7.582z">
+                </path>
+              </svg>
+            </a>
+            <div class="tooltip">Gmail</div>
+          </li>
+          <li class="icon-content">
+            <a href="https://github.com/lauyankai" aria-label="GitHub" data-social="github" target="_blank">
+              <div class="filled"></div>
+              <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="240" height="240" viewBox="0 0 48 48">
+                <circle cx="28" cy="28" r="18" fill="#9fa8da"></circle>
+                <path fill="none" stroke="#18193f" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                  d="M35.054,38.836	C31.97,41.137,28.144,42.5,24,42.5C13.783,42.5,5.5,34.217,5.5,24c0-2.917,0.675-5.676,1.878-8.13">
+                </path>
+                <path fill="none" stroke="#18193f" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                  d="M13.869,8.518	C16.779,6.61,20.26,5.5,24,5.5c10.217,0,18.5,8.283,18.5,18.5c0,2.941-0.686,5.721-1.907,8.19">
+                </path>
+                <path fill="#18193f"
+                  d="M34,23c0-1.574-0.576-3.038-1.558-4.275c0.442-1.368,0.93-3.771-0.242-5.648	c-2.251,0-3.73,1.545-4.436,2.514C26.602,15.213,25.333,15,24,15s-2.602,0.213-3.764,0.591c-0.706-0.969-2.184-2.514-4.436-2.514	c-1.328,2.126-0.526,4.45-0.073,5.43C14.638,19.788,14,21.334,14,23c0,3.78,3.281,6.94,7.686,7.776	c-1.309,0.673-2.287,1.896-2.587,3.38h-1.315c-1.297,0-1.801-0.526-2.502-1.415c-0.692-0.889-1.437-1.488-2.331-1.736	c-0.482-0.051-0.806,0.316-0.386,0.641c1.419,0.966,1.516,2.548,2.085,3.583C15.168,36.161,16.229,37,17.429,37H19v5.942h10v-7.806	c0-1.908-1.098-3.544-2.686-4.36C30.719,29.94,34,26.78,34,23z">
+                </path>
+              </svg>
+            </a>
+            <div class="tooltip">GitHub</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <!-- JOURNEY SECTION -->
+  <section id="journey" class="bg-black text-white py-20 px-6">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-4xl font-bold mb-16 text-center text-[#00bcff]">My Journey</h2>
+
+      <div class="relative">
+        <!-- Vertical Line -->
+        <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-[#00bcff]"></div>
+
+        <!-- Timeline Card 1 - Right -->
+        <div class="relative mb-16 md:mb-24 md:flex justify-end">
+          <div
+            class="hidden md:block absolute w-4 h-4 bg-[#00bcff] rounded-full left-1/2 transform -translate-x-1/2 top-4 z-10">
+          </div>
+          <div class="md:w-1/2"></div>
+          <div class="md:w-1/2 md:pl-10">
+            <div class="bg-[#111] p-6 rounded-2xl border border-[#00bcff] shadow-lg journey-card">
+              <h3 class="text-xl font-semibold text-[#00bcff]">L'Oréal Datathon 2025</h3>
+              <span class="text-xs text-gray-400 block mt-1">End-to-end Comment Analytics &amp; Dashboard • October
+                2025</span>
+              <ul class="mt-4 space-y-3 text-gray-300 text-sm">
+                <li class="flex items-start">
+                  <span class="inline-block w-2 h-2 rounded-full bg-[#00bcff] mr-3 mt-1.5 flex-shrink-0"></span>
+                  <span>Led a team of 4 to develop an end-to-end NLP pipeline to classify, cluster, analyse and
+                    visualise user comments.</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="inline-block w-2 h-2 rounded-full bg-[#00bcff] mr-3 mt-1.5 flex-shrink-0"></span>
+                  <span>Spearheaded the design and development of an interactive frontend dashboard using Streamlit to
+                    visualise comment analytics, NLP clusters, and user insights.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Timeline Card 2 - Left -->
+        <div class="relative mb-16 md:mb-24 md:flex justify-start">
+          <div
+            class="hidden md:block absolute w-4 h-4 bg-[#00bcff] rounded-full left-1/2 transform -translate-x-1/2 top-4 z-10">
+          </div>
+          <div class="md:w-1/2 md:pr-10">
+            <div class="bg-[#111] p-6 rounded-2xl border border-[#00bcff] shadow-lg journey-card">
+              <h3 class="text-xl font-semibold text-[#00bcff]">Green Growth Idea Hackathon 2025</h3>
+              <span class="text-xs text-gray-400 block mt-1">Energy-generating and Storing Tyre | Pohang city, Korea •
+                May 2025</span>
+              <ul class="mt-4 space-y-3 text-gray-300 text-sm">
+                <li class="flex items-start">
+                  <span class="inline-block w-2 h-2 rounded-full bg-[#00bcff] mr-3 mt-1.5 flex-shrink-0"></span>
+                  <span>Proposed an EV tyre system that uses piezoelectric and triboelectric to generate and store
+                    energy while in motion.</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="inline-block w-2 h-2 rounded-full bg-[#00bcff] mr-3 mt-1.5 flex-shrink-0"></span>
+                  <span>Delivered a technical pitch, including system mechanism, sustainability impact, and real-world
+                    scalability.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="md:w-1/2"></div>
+        </div>
+
+        <!-- Timeline Card 3 - Right -->
+        <div class="relative mb-16 md:mb-24 md:flex justify-end">
+          <div
+            class="hidden md:block absolute w-4 h-4 bg-[#00bcff] rounded-full left-1/2 transform -translate-x-1/2 top-4 z-10">
+          </div>
+          <div class="md:w-1/2"></div>
+          <div class="md:w-1/2 md:pl-10">
+            <div class="bg-[#111] p-6 rounded-2xl border border-[#00bcff] shadow-lg journey-card">
+              <div class="flex justify-between items-start gap-4 flex-wrap">
+                <h3 class="text-xl font-semibold text-[#00bcff]">KADA Financial System</h3>
+                <a href="https://github.com/lauyankai/KADA-system" target="_blank"
+                  class="text-xs text-[#00bcff] hover:text-white flex items-center gap-1 transition-colors mt-1">
+                  link <i class="fas fa-external-link-alt text-[10px]"></i>
+                </a>
+              </div>
+              <span class="text-xs text-gray-400 block mt-1">Koperasi Kakitangan KADA Kelantan Sdn Bhd • October 2024 -
+                January 2025</span>
+              <ul class="mt-4 space-y-3 text-gray-300 text-sm">
+                <li class="flex items-start">
+                  <span class="inline-block w-2 h-2 rounded-full bg-[#00bcff] mr-3 mt-1.5 flex-shrink-0"></span>
+                  <span>Implemented PHP MVC architecture, integrated PhpSpreadsheet and TCPDF for automated report
+                    generation.</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="inline-block w-2 h-2 rounded-full bg-[#00bcff] mr-3 mt-1.5 flex-shrink-0"></span>
+                  <span>Developed RESTful APIs to facilitate seamless frontend-backend communication.</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="inline-block w-2 h-2 rounded-full bg-[#00bcff] mr-3 mt-1.5 flex-shrink-0"></span>
+                  <span>Designed and optimised MySQL databases, and role-based access control for members, directors,
+                    and admins.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Timeline Card 4 - Left -->
+        <div class="relative mb-16 md:mb-24 md:flex justify-start">
+          <div
+            class="hidden md:block absolute w-4 h-4 bg-[#00bcff] rounded-full left-1/2 transform -translate-x-1/2 top-4 z-10">
+          </div>
+          <div class="md:w-1/2 md:pr-10">
+            <div class="bg-[#111] p-6 rounded-2xl border border-[#00bcff] shadow-lg journey-card">
+              <h3 class="text-xl font-semibold text-[#00bcff]">ProSync</h3>
+              <span class="text-xs text-gray-400 block mt-1">Cisco AI Hackathon 2024 Project • November 2024</span>
+              <ul class="mt-4 space-y-3 text-gray-300 text-sm">
+                <li class="flex items-start">
+                  <span class="inline-block w-2 h-2 rounded-full bg-[#00bcff] mr-3 mt-1.5 flex-shrink-0"></span>
+                  <span>Led a group of 4 to create an innovative project-student matching platform for academic and
+                    career growth.</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="inline-block w-2 h-2 rounded-full bg-[#00bcff] mr-3 mt-1.5 flex-shrink-0"></span>
+                  <span>Designed and build the web application using PHP MVC architecture.</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="inline-block w-2 h-2 rounded-full bg-[#00bcff] mr-3 mt-1.5 flex-shrink-0"></span>
+                  <span>Developed a matching algorithm to connect students with relevant projects based on their skills
+                    and interests.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="md:w-1/2"></div>
+        </div>
+
+        <!-- Timeline Card 5 - Right -->
+        <div class="relative mb-16 md:mb-24 md:flex justify-end">
+          <div
+            class="hidden md:block absolute w-4 h-4 bg-[#00bcff] rounded-full left-1/2 transform -translate-x-1/2 top-4 z-10">
+          </div>
+          <div class="md:w-1/2"></div>
+          <div class="md:w-1/2 md:pl-10">
+            <div class="bg-[#111] p-6 rounded-2xl border border-[#00bcff] shadow-lg journey-card">
+              <div class="flex justify-between items-start gap-4 flex-wrap">
+                <h3 class="text-xl font-semibold text-[#00bcff]">Agriculture Crop Yield Prediction</h3>
+                <a href="https://github.com/lauyankai" target="_blank"
+                  class="text-xs text-[#00bcff] hover:text-white flex items-center gap-1 transition-colors mt-1">
+                  link <i class="fas fa-external-link-alt text-[10px]"></i>
+                </a>
+              </div>
+              <span class="text-xs text-gray-400 block mt-1">MCMC Datathon 2024 Project • October 2024</span>
+              <ul class="mt-4 space-y-3 text-gray-300 text-sm">
+                <li class="flex items-start">
+                  <span class="inline-block w-2 h-2 rounded-full bg-[#00bcff] mr-3 mt-1.5 flex-shrink-0"></span>
+                  <span>Led a team of 4 in developing an ML-based crop yield prediction model using real-world
+                    agricultural data.</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="inline-block w-2 h-2 rounded-full bg-[#00bcff] mr-3 mt-1.5 flex-shrink-0"></span>
+                  <span>Conducted data exploration and feature engineering using Pandas, NumPy, and Matplotlib.</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="inline-block w-2 h-2 rounded-full bg-[#00bcff] mr-3 mt-1.5 flex-shrink-0"></span>
+                  <span>Built and optimised machine learning models using Scikit-learn.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Timeline Card 6 - Left -->
+        <div class="relative mb-16 md:mb-24 md:flex justify-start">
+          <div
+            class="hidden md:block absolute w-4 h-4 bg-[#00bcff] rounded-full left-1/2 transform -translate-x-1/2 top-4 z-10">
+          </div>
+          <div class="md:w-1/2 md:pr-10">
+            <div class="bg-[#111] p-6 rounded-2xl border border-[#00bcff] shadow-lg journey-card">
+              <h3 class="text-xl font-semibold text-[#00bcff]">Web Administrator</h3>
+              <span class="text-xs text-gray-400 block mt-1">UTM Faculty of Computing • September 2023 - June
+                2024</span>
+              <ul class="mt-4 space-y-3 text-gray-300 text-sm">
+                <li class="flex items-start">
+                  <span class="inline-block w-2 h-2 rounded-full bg-[#00bcff] mr-3 mt-1.5 flex-shrink-0"></span>
+                  <span>Maintained website infrastructure, managed system updates, and logged operational
+                    records.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="md:w-1/2"></div>
+        </div>
+
+        <!-- Timeline Card 7 - Right -->
+        <div class="relative mb-16 md:mb-24 md:flex justify-end">
+          <div
+            class="hidden md:block absolute w-4 h-4 bg-[#00bcff] rounded-full left-1/2 transform -translate-x-1/2 top-4 z-10">
+          </div>
+          <div class="md:w-1/2"></div>
+          <div class="md:w-1/2 md:pl-10">
+            <div class="bg-[#111] p-6 rounded-2xl border border-[#00bcff] shadow-lg journey-card">
+              <h3 class="text-xl font-semibold text-[#00bcff]">Bachelor of Computer Science (Honours)</h3>
+              <span class="text-xs text-gray-400 block mt-1">Universiti Teknologi Malaysia (UTM) • 2023 - 2027</span>
+              <ul class="mt-4 space-y-3 text-gray-300 text-sm">
+                <li class="flex items-start">
+                  <span class="inline-block w-2 h-2 rounded-full bg-[#00bcff] mr-3 mt-1.5 flex-shrink-0"></span>
+                  <span>Specialising in Data Engineering with a 4.00/4.00 CGPA.</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="inline-block w-2 h-2 rounded-full bg-[#00bcff] mr-3 mt-1.5 flex-shrink-0"></span>
+                  <span>Active participant in global and national tech hackathons.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TECH STACK SECTION -->
+  <section id="tech-stack" class="bg-black text-white py-20 px-6 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto flex flex-col gap-20">
+      <!-- FRONTEND -->
+      <div class="flex md:flex-row flex-col gap-8 items-start" id="frontend">
+        <!-- Label -->
+        <div class="w-full md:w-1/5 text-gray-400 text-lg font-bold sticky top-18">
+          <div class="category-label cursor-pointer hover:text-white transition"
+            onclick="document.querySelector('#frontend').scrollIntoView({behavior: 'smooth'})">FRONTEND</div>
+        </div>
+
+        <!-- Tech Grid -->
+        <div class="w-full md:w-4/5 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 reveal-section">
+          <div class="flex items-center gap-2"><img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+              class="w-6 h-6"><span class="text-lg">Javascript</span></div>
+          <div class="flex items-center gap-2"><img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" class="w-6 h-6"><span
+              class="text-lg">React</span></div>
+          <div class="flex items-center gap-2"><img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
+              class="w-6 h-6" /><span class="text-lg">Tailwind CSS</span></div>
+          <div class="flex items-center gap-2"><img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
+              class="w-6 h-6" /><span class="text-lg">HTML</span></div>
+          <div class="flex items-center gap-2"><img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
+              class="w-6 h-6" /><span class="text-lg">CSS</span></div>
+          <div class="flex items-center gap-2"><img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg"
+              class="w-6 h-6"><span class="text-lg">C++</span></div>
+          <div class="flex items-center gap-2"><img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
+              class="w-6 h-6"><span class="text-lg">Bootstrap</span></div>
+        </div>
+      </div>
+
+      <!-- BACKEND & DATA -->
+      <div class="flex md:flex-row flex-col gap-8 items-start" id="backend">
+        <div class="w-full md:w-1/5 text-gray-400 text-lg font-bold sticky top-18">
+          <div class="category-label cursor-pointer hover:text-white transition"
+            onclick="document.querySelector('#backend').scrollIntoView({behavior: 'smooth'})">BACKEND & DATA</div>
+        </div>
+        <div class="w-full md:w-4/5 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 reveal-section">
+          <div class="flex items-center gap-2"><img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" class="w-6 h-6"><span
+              class="text-lg">Python</span></div>
+          <div class="flex items-center gap-2"><img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apache/apache-original.svg" class="w-6 h-6"
+              style="filter: invert(1);"><span class="text-lg">PySpark</span></div>
+          <div class="flex items-center gap-2"><img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" class="w-6 h-6"><span
+              class="text-lg">Azure Data Factory</span></div>
+          <div class="flex items-center gap-2"><img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" class="w-6 h-6"><span
+              class="text-lg">Node.js</span></div>
+          <div class="flex items-center gap-2"><img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" class="w-6 h-6"><span
+              class="text-lg">PHP</span></div>
+        </div>
+      </div>
+
+      <!-- DATABASE -->
+      <div class="flex md:flex-row flex-col gap-8 items-start" id="database">
+        <div class="w-full md:w-1/5 text-gray-400 text-lg font-bold sticky top-18">
+          <div class="category-label cursor-pointer hover:text-white transition"
+            onclick="document.querySelector('#database').scrollIntoView({behavior: 'smooth'})">DATABASE</div>
+        </div>
+        <div class="w-full md:w-4/5 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 reveal-section">
+          <div class="flex items-center gap-2"><img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+              class="w-6 h-6"><span class="text-lg">PostgreSQL</span></div>
+          <div class="flex items-center gap-2"><img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+              class="w-6 h-6"><span class="text-lg">MongoDB</span></div>
+          <div class="flex items-center gap-2"><img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg" class="w-6 h-6"><span
+              class="text-lg">Oracle</span></div>
+        </div>
+      </div>
+
+      <!-- TOOLS & CLOUD -->
+      <div class="flex md:flex-row flex-col gap-8 items-start" id="tools">
+        <div class="w-full md:w-1/5 text-gray-400 text-lg font-bold sticky top-18">
+          <div class="category-label cursor-pointer hover:text-white transition"
+            onclick="document.querySelector('#tools').scrollIntoView({behavior: 'smooth'})">TOOLS & CLOUD</div>
+        </div>
+        <div class="w-full md:w-4/5 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 reveal-section">
+          <div class="flex items-center gap-2"><img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" class="w-6 h-6"><span
+              class="text-lg">Git</span></div>
+          <div class="flex items-center gap-2"><img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" class="w-6 h-6"><span
+              class="text-lg">Docker</span></div>
+          <div class="flex items-center gap-2"><img src="./assets/github-logo.png" class="w-6 h-6"><span
+              class="text-lg">GitHub</span></div>
+          <div class="flex items-center gap-2"><img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" class="w-6 h-6"><span
+              class="text-lg">Azure Cloud</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- BLOG SECTION -->
+  <section id="blog" class="bg-black text-white py-20 px-6">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold mb-4">Competitions &amp; Achievements</h2>
+        <p class="text-gray-400 text-lg">My success and recognition in global &amp; national tech hackathons.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Achievement 1 -->
+        <article
+          class="blog-card bg-[#111] rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+
+          <div class="p-6">
+            <div class="flex items-center text-sm text-gray-400 mb-3">
+              <i class="fas fa-calendar mr-2"></i>
+              <span>January 2025</span>
+              <span class="mx-2">•</span>
+              <i class="fas fa-award mr-2"></i>
+              <span>Top 5 Global</span>
+            </div>
+            <h3 class="text-xl font-semibold mb-3 text-white hover:text-[#00bcff] transition-colors">
+              <a href="https://github.com/lauyankai" target="_blank" class="block">Green Growth Idea Hackathon</a>
+            </h3>
+            <p class="text-gray-300 mb-4 line-clamp-3">
+              Pohang, Korea - Developed an innovative sustainable technology proposal and pitch as part of a global
+              developer team, securing a spot in the top 5 finalists.
+            </p>
+            <div class="flex items-center justify-between">
+              <a href="https://github.com/lauyankai" target="_blank"
+                class="text-[#00bcff] hover:text-[#009ada] font-semibold transition-colors">
+                View Profile <i class="fas fa-arrow-right ml-1"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Achievement 2 -->
+        <article
+          class="blog-card bg-[#111] rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+
+          <div class="p-6">
+            <div class="flex items-center text-sm text-gray-400 mb-3">
+              <i class="fas fa-calendar mr-2"></i>
+              <span>May 2025</span>
+              <span class="mx-2">•</span>
+              <i class="fas fa-award mr-2"></i>
+              <span>Top 10 Finalist</span>
+            </div>
+            <h3 class="text-xl font-semibold mb-3 text-white hover:text-[#00bcff] transition-colors">
+              <a href="https://github.com/lauyankai" target="_blank" class="block">L'Oréal MYSG x Monash Datathon</a>
+            </h3>
+            <p class="text-gray-300 mb-4 line-clamp-3">
+              Engineered a complete NLP comment classifying and clustering pipeline to identify customer concerns.
+              Developed an interactive Streamlit web dashboard.
+            </p>
+            <div class="flex items-center justify-between">
+              <a href="https://github.com/lauyankai" target="_blank"
+                class="text-[#00bcff] hover:text-[#009ada] font-semibold transition-colors">
+                View Code <i class="fas fa-arrow-right ml-1"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Achievement 3 -->
+        <article
+          class="blog-card bg-[#111] rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+
+          <div class="p-6">
+            <div class="flex items-center text-sm text-gray-400 mb-3">
+              <i class="fas fa-calendar mr-2"></i>
+              <span>November 2024</span>
+              <span class="mx-2">•</span>
+              <i class="fas fa-award mr-2"></i>
+              <span>3rd Runner-up</span>
+            </div>
+            <h3 class="text-xl font-semibold mb-3 text-white hover:text-[#00bcff] transition-colors">
+              <a href="https://github.com/lauyankai" target="_blank" class="block">Cisco AI Hackathon</a>
+            </h3>
+            <p class="text-gray-300 mb-4 line-clamp-3">
+              Designed an intelligent predictive engine leveraging advanced machine learning models to solve business
+              challenges under strict constraints.
+            </p>
+            <div class="flex items-center justify-between">
+              <a href="https://github.com/lauyankai" target="_blank"
+                class="text-[#00bcff] hover:text-[#009ada] font-semibold transition-colors">
+                View Hackathon <i class="fas fa-arrow-right ml-1"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- View All Posts Button -->
+      <div class="text-center mt-12">
+        <a href="https://linkedin.com/in/lauyankai" target="_blank"
+          class="inline-flex items-center bg-[#00bcff] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#009ada] transition-all duration-300 transform hover:scale-105">
+          View LinkedIn Activity
+          <i class="fas fa-arrow-right ml-2"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- UPCOMING PROJECTS SECTION -->
+
+  <!-- PROJECTS SECTION -->
+  <section id="projects" class="relative bg-black text-white py-20 px-6 overflow-hidden">
+
+    <!-- PARTICLES BACKGROUND -->
+    <div id="particles-projects" class="absolute top-0 left-0 w-full h-full z-0"></div>
+
+    <!-- ACTUAL PROJECT CONTENT -->
+    <div class="relative z-10">
+      <div class="max-w-6xl mx-auto text-center mb-12">
+        <h2 class="text-4xl font-bold mb-4">Projects</h2>
+        <p class="text-gray-300 text-lg">Some of the things I've built.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-10 max-w-6xl mx-auto">
+
+        <!-- PROJECT CARD 1 -->
+        <div
+          class="project-card bg-white text-black shadow-xl rounded-2xl overflow-hidden transform hover:scale-[1.02] transition-all duration-300">
+
+          <div class="p-6">
+            <h3 class="text-2xl font-semibold mb-2">Azure Medallion Architecture ETL Pipeline</h3>
+            <p class="text-gray-700 mb-4">
+              An end-to-end cloud data pipeline built using Azure Data Factory, Databricks, and Synapse Analytics to
+              transform raw SQL data into an interactive Power BI dashboard for demographic analysis.
+            </p>
+            <div class="flex flex-wrap gap-3 mb-4">
+              <span class="flex items-center gap-1 bg-gray-100 px-2 py-1 text-xs rounded cursor-pointer">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" alt="Azure"
+                  class="w-4 h-4" />
+                Azure
+              </span>
+              <span class="flex items-center gap-1 bg-gray-100 px-2 py-1 text-xs rounded cursor-pointer">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apache/apache-original.svg"
+                  alt="Databricks" class="w-4 h-4" style="filter:invert(1);" />
+                Databricks
+              </span>
+              <span class="flex items-center gap-1 bg-gray-100 px-2 py-1 text-xs rounded cursor-pointer">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"
+                  class="w-4 h-4" />
+                Python
+              </span>
+              <span class="flex items-center gap-1 bg-gray-100 px-2 py-1 text-xs rounded cursor-pointer">
+                <img
+                  src="https://raw.githubusercontent.com/gilbarbara/logos/92bb74e98bca1ea1ad794442676ebc4e75038adc/logos/microsoft-power-bi.svg"
+                  alt="Power BI" class="w-4 h-4" />
+                Power BI
+              </span>
+            </div>
+            <div class="flex gap-4">
+              <a href="https://github.com/lauyankai" target="_blank"
+                class="bg-[#00bcff] text-white px-4 py-2 rounded hover:bg-[#009ada] transition-all text-sm">
+                Live Demo
+              </a>
+              <a href="https://github.com/lauyankai" target="_blank"
+                class="bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-700 transition-all text-sm">
+                GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJECT CARD 2 -->
+        <div
+          class="project-card bg-white text-black shadow-xl rounded-2xl overflow-hidden transform hover:scale-[1.02] transition-all duration-300">
+
+          <div class="p-6">
+            <h3 class="text-2xl font-semibold mb-2">Apache Spark Census Data Warehouse</h3>
+            <p class="text-gray-700 mb-4">
+              Engineered a Star Schema data warehouse processing 2.2GB of CSV census data into Parquet format utilizing
+              PySpark and PostgreSQL for high-speed analytical queries.
+            </p>
+            <div class="flex flex-wrap gap-3 mb-4">
+              <span class="flex items-center gap-1 bg-gray-100 px-2 py-1 text-xs rounded cursor-pointer">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apache/apache-original.svg" alt="Spark"
+                  class="w-4 h-4" style="filter:invert(1);" />
+                PySpark
+              </span>
+              <span class="flex items-center gap-1 bg-gray-100 px-2 py-1 text-xs rounded cursor-pointer">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+                  alt="PostgreSQL" class="w-4 h-4" />
+                PostgreSQL
+              </span>
+              <span class="flex items-center gap-1 bg-gray-100 px-2 py-1 text-xs rounded cursor-pointer">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"
+                  class="w-4 h-4" />
+                Python
+              </span>
+            </div>
+            <div class="flex gap-4">
+              <a href="https://github.com/lauyankai" target="_blank"
+                class="bg-[#00bcff] text-white px-4 py-2 rounded hover:bg-[#009ada] transition-all text-sm">
+                Live Demo
+              </a>
+              <a href="https://github.com/lauyankai" target="_blank"
+                class="bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-700 transition-all text-sm">
+                GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJECT CARD 3 -->
+        <div
+          class="project-card bg-white text-black shadow-xl rounded-2xl overflow-hidden transform hover:scale-[1.02] transition-all duration-300">
+
+          <div class="p-6">
+            <h3 class="text-2xl font-semibold mb-2">L'Oréal Datathon NLP Pipeline</h3>
+            <p class="text-gray-700 mb-4">
+              Led development of an NLP pipeline classifying and clustering online user comments. Integrates text
+              tokenization and sentiment modeling with a Streamlit interface.
+            </p>
+            <div class="flex flex-wrap gap-3 mb-4">
+              <span class="flex items-center gap-1 bg-gray-100 px-2 py-1 text-xs rounded cursor-pointer">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"
+                  class="w-4 h-4" />
+                Python
+              </span>
+              <span class="flex items-center gap-1 bg-gray-100 px-2 py-1 text-xs rounded cursor-pointer">
+                <img
+                  src="https://raw.githubusercontent.com/gilbarbara/logos/92bb74e98bca1ea1ad794442676ebc4e75038adc/logos/openai-icon.svg"
+                  alt="NLP" class="w-4 h-4" />
+                NLP
+              </span>
+              <span class="flex items-center gap-1 bg-gray-100 px-2 py-1 text-xs rounded cursor-pointer">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Streamlit"
+                  class="w-4 h-4" />
+                Streamlit
+              </span>
+            </div>
+            <div class="flex gap-4">
+              <a href="https://github.com/lauyankai" target="_blank"
+                class="bg-[#00bcff] text-white px-4 py-2 rounded hover:bg-[#009ada] transition-all text-sm">
+                Live Demo
+              </a>
+              <a href="https://github.com/lauyankai" target="_blank"
+                class="bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-700 transition-all text-sm">
+                GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJECT CARD 4 -->
+        <div
+          class="project-card bg-white text-black shadow-xl rounded-2xl overflow-hidden transform hover:scale-[1.02] transition-all duration-300">
+
+          <div class="p-6">
+            <h3 class="text-2xl font-semibold mb-2">BioFlora HCI Blog</h3>
+            <p class="text-gray-700 mb-4">
+              A visually rich blog page built for Human Computer Interaction course using MDX and React, highlighting
+              responsive layouts and micro-interactions.
+            </p>
+            <div class="flex flex-wrap gap-3 mb-4">
+              <span class="flex items-center gap-1 bg-gray-100 px-2 py-1 text-xs rounded cursor-pointer">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
+                  alt="React" class="w-4 h-4" />
+                React
+              </span>
+              <span class="flex items-center gap-1 bg-gray-100 px-2 py-1 text-xs rounded cursor-pointer">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
+                  alt="Tailwind CSS" class="w-4 h-4" />
+                Tailwind CSS
+              </span>
+              <span class="flex items-center gap-1 bg-gray-100 px-2 py-1 text-xs rounded cursor-pointer">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+                  alt="JavaScript" class="w-4 h-4" />
+                JavaScript
+              </span>
+            </div>
+            <div class="flex gap-4">
+              <a href="https://github.com/lauyankai/BioFlora" target="_blank"
+                class="bg-[#00bcff] text-white px-4 py-2 rounded hover:bg-[#009ada] transition-all text-sm">
+                Live Demo
+              </a>
+              <a href="https://github.com/lauyankai/BioFlora" target="_blank"
+                class="bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-700 transition-all text-sm">
+                GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJECT CARD 5 -->
+        <div
+          class="project-card bg-white text-black shadow-xl rounded-2xl overflow-hidden transform hover:scale-[1.02] transition-all duration-300">
+
+          <div class="p-6">
+            <h3 class="text-2xl font-semibold mb-2">Student Registration System</h3>
+            <p class="text-gray-700 mb-4">
+              A secure web-based student info registration database backend crafted with PHP, offering user
+              authentication, record entry, search, and update actions.
+            </p>
+            <div class="flex flex-wrap gap-3 mb-4">
+              <span class="flex items-center gap-1 bg-gray-100 px-2 py-1 text-xs rounded cursor-pointer">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP"
+                  class="w-4 h-4" />
+                PHP
+              </span>
+              <span class="flex items-center gap-1 bg-gray-100 px-2 py-1 text-xs rounded cursor-pointer">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL"
+                  class="w-4 h-4" />
+                MySQL
+              </span>
+              <span class="flex items-center gap-1 bg-gray-100 px-2 py-1 text-xs rounded cursor-pointer">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
+                  alt="Bootstrap" class="w-4 h-4" />
+                Bootstrap
+              </span>
+            </div>
+            <div class="flex gap-4">
+              <a href="https://github.com/lauyankai/StudentInfoRegSystem" target="_blank"
+                class="bg-[#00bcff] text-white px-4 py-2 rounded hover:bg-[#009ada] transition-all text-sm">
+                Live Demo
+              </a>
+              <a href="https://github.com/lauyankai/StudentInfoRegSystem" target="_blank"
+                class="bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-700 transition-all text-sm">
+                GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJECT CARD 6 -->
+        <div
+          class="project-card bg-white text-black shadow-xl rounded-2xl overflow-hidden transform hover:scale-[1.02] transition-all duration-300">
+
+          <div class="p-6">
+            <h3 class="text-2xl font-semibold mb-2">KADA Financial System</h3>
+            <p class="text-gray-700 mb-4">
+              A comprehensive financial and member transaction tracking system developed in PHP for Koperasi KADA
+              Kelantan.
+            </p>
+            <div class="flex flex-wrap gap-3 mb-4">
+              <span class="flex items-center gap-1 bg-gray-100 px-2 py-1 text-xs rounded cursor-pointer">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP"
+                  class="w-4 h-4" />
+                PHP
+              </span>
+              <span class="flex items-center gap-1 bg-gray-100 px-2 py-1 text-xs rounded cursor-pointer">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL"
+                  class="w-4 h-4" />
+                MySQL
+              </span>
+              <span class="flex items-center gap-1 bg-gray-100 px-2 py-1 text-xs rounded cursor-pointer">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
+                  alt="Bootstrap" class="w-4 h-4" />
+                Bootstrap
+              </span>
+            </div>
+            <div class="flex gap-4">
+              <a href="https://github.com/lauyankai/KADA-system" target="_blank"
+                class="bg-[#00bcff] text-white px-4 py-2 rounded hover:bg-[#009ada] transition-all text-sm">
+                Live Demo
+              </a>
+              <a href="https://github.com/lauyankai/KADA-system" target="_blank"
+                class="bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-700 transition-all text-sm">
+                GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJECT CARD 7 -->
+        <div
+          class="project-card bg-white text-black shadow-xl rounded-2xl overflow-hidden transform hover:scale-[1.02] transition-all duration-300">
+
+          <div class="p-6">
+            <h3 class="text-2xl font-semibold mb-2">Personal Portfolio Website</h3>
+            <p class="text-gray-700 mb-4">
+              A beautiful personal portfolio built with HTML, CSS, JavaScript, and GSAP. Features lazy loading, offline
+              PWA features, and live GitHub stats integration.
+            </p>
+            <div class="flex flex-wrap gap-3 mb-4">
+              <span class="flex items-center gap-1 bg-gray-100 px-2 py-1 text-xs rounded cursor-pointer">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="HTML"
+                  class="w-4 h-4" />
+                HTML
+              </span>
+              <span class="flex items-center gap-1 bg-gray-100 px-2 py-1 text-xs rounded cursor-pointer">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
+                  alt="CSS" class="w-4 h-4" />
+                CSS
+              </span>
+              <span class="flex items-center gap-1 bg-gray-100 px-2 py-1 text-xs rounded cursor-pointer">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+                  alt="JavaScript" class="w-4 h-4" />
+                JavaScript
+              </span>
+            </div>
+            <div class="flex gap-4">
+              <a href="https://lauyankai.github.io" target="_blank"
+                class="bg-[#00bcff] text-white px-4 py-2 rounded hover:bg-[#009ada] transition-all text-sm">
+                Live Demo
+              </a>
+              <a href="https://github.com/lauyankai/lauyankai.github.io" target="_blank"
+                class="bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-700 transition-all text-sm">
+                GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- CONTACT SECTION -->
+  <section id="contact" class="bg-black text-white py-20 px-6 flex items-center justify-center">
+    <div class="w-full max-w-4xl text-center flex flex-col items-center gap-6">
+      <!-- Subtitle -->
+      <p class="text-gray-400 text-lg">Let's connect and build something amazing!</p>
+
+      <!-- LinkedIn Link -->
+      <a href="https://linkedin.com/in/lauyankai" target="_blank"
+        class="hover:text-[#00bcff] transition-all duration-300">
+        <h2 class="text-4xl font-bold mb-2">linkedin.com/in/lauyankai</h2>
+      </a>
+    </div>
+  </section>
+  <a href="https://linkedin.com/in/lauyankai" target="_blank" class="fixed-email" title="LinkedIn Connect">
+    linkedin.com/in/lauyankai
+  </a>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://unpkg.com/@motionone/dom/dist/motion.min.js"></script>
+  <script src="libs/gsap.min.js"></script>
+  <script src="libs/motion.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/Flip.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/Observer.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollToPlugin.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/Draggable.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/MotionPathPlugin.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/EaselPlugin.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/PixiPlugin.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/TextPlugin.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/EasePack.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/CustomEase.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <!-- ParticleJs -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Back to Top Button -->
+  <div class="wrapper">
+    <button class="back2top-button" id="backToTop">
+      <svg class="svgIcon" viewBox="0 0 384 512">
+        <path
+          d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z" />
+      </svg>
+      <span class="button-label">Back to Top</span>
+    </button>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
