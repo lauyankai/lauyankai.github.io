@@ -162,27 +162,35 @@
 
       <div
         class="max-w-3xl mx-auto bg-[#111] p-6 sm:p-8 rounded-2xl border border-[#00bcff]/30 hover:border-[#00bcff] shadow-lg transition-all duration-300 hover:shadow-[0_0_15px_rgba(0,188,255,0.2)]">
-        <div class="flex flex-col md:flex-row md:justify-between md:items-center gap-4">
-          <div>
-            <h3 class="text-xl sm:text-2xl font-bold text-white mb-2">Bachelor of Computer Science (Honours)</h3>
-            <h4 class="text-lg text-[#00bcff] font-semibold mb-1">Universiti Teknologi Malaysia (UTM)</h4>
-            <p class="text-sm text-gray-400 mb-0">Specializing in Data Engineering</p>
+        <div class="flex flex-col sm:flex-row items-center sm:items-start gap-6">
+          <!-- Logo container with white background to make the corporate colors stand out -->
+          <div class="flex-shrink-0 bg-white p-3 rounded-xl border border-[#00bcff]/20 shadow-[0_0_15px_rgba(0,188,255,0.1)] hover:scale-105 transition duration-300 flex items-center justify-center w-24 h-24">
+            <img src="assets/utm-logo.png" alt="UTM Logo" class="max-w-full max-h-full object-contain">
           </div>
-          <div
-            class="md:text-right flex flex-row md:flex-col justify-between items-center md:items-end gap-2 flex-wrap">
-            <span
-              class="inline-block bg-[#00bcff]/10 text-[#00bcff] px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-semibold border border-[#00bcff]/20">2023
-              - 2027</span>
-            <p class="text-base sm:text-lg font-bold text-[#00bcff] mb-0">CGPA: 4.00 / 4.00</p>
+          
+          <!-- Details container -->
+          <div class="flex-grow text-center sm:text-left">
+            <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-4">
+              <div>
+                <h3 class="text-xl sm:text-2xl font-bold text-white mb-2">Bachelor of Computer Science (Honours)</h3>
+                <h4 class="text-lg text-[#00bcff] font-semibold mb-1">Universiti Teknologi Malaysia (UTM)</h4>
+                <p class="text-sm text-gray-400 mb-0">Specializing in Data Engineering</p>
+              </div>
+              <div class="md:text-right flex flex-row md:flex-col justify-center sm:justify-start md:items-end gap-2 flex-wrap mt-2 md:mt-0">
+                <span class="inline-block bg-[#00bcff]/10 text-[#00bcff] px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-semibold border border-[#00bcff]/20">2023 - 2027</span>
+                <p class="text-base sm:text-lg font-bold text-[#00bcff] mb-0 mt-1 md:mt-0">CGPA: 4.00 / 4.00</p>
+              </div>
+            </div>
           </div>
         </div>
+
         <div class="h-[1px] bg-gradient-to-r from-[#00bcff]/30 via-transparent to-transparent my-6"></div>
+        
         <ul class="space-y-3 text-gray-300 text-sm leading-relaxed pl-0 list-none">
           <li class="flex items-start">
             <span
               class="inline-block w-1.5 h-1.5 rounded-full bg-[#00bcff] mr-3 mt-2 flex-shrink-0 shadow-[0_0_5px_#00bcff]"></span>
-            <span>Focus on advanced data processing, distributed databases, machine learning algorithms, and enterprise
-              systems.</span>
+            <span>Focus on advanced data processing, distributed databases, machine learning algorithms, and enterprise systems.</span>
           </li>
           <li class="flex items-start">
             <span
@@ -572,12 +580,7 @@
               Engineered a complete NLP comment classifying and clustering pipeline to identify customer concerns.
               Developed an interactive Streamlit web dashboard.
             </p>
-            <div class="flex items-center justify-between">
-              <a href="https://github.com/lauyankai" target="_blank"
-                class="text-[#00bcff] hover:text-[#009ada] font-semibold transition-colors">
-                View Code <i class="fas fa-arrow-right ml-1"></i>
-              </a>
-            </div>
+
           </div>
         </article>
 
